@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'guildMemberAdd',
@@ -6,7 +6,7 @@ module.exports = {
     async execute(client, member) {
 
         const db = client.db;
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setAuthor({
                 name: `${member.user.tag} (id : ${member.id})`,
                 iconURL: member.user.displayAvatarURL(),

@@ -1,18 +1,25 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, Partials, color } = require("discord.js");
 require("dotenv").config();
 const Logger = require(`./Utils/Logger`);
 const Database = require(`./Utils/Database`)
 
 const client = new Client({
-    intents: 98303,
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION', 'USER', 'GUILD_MEMBER', 'GUILD_SCHEDULED_EVENT'],
+    intents: 3276799,
+    partials: [
+        Partials.Message,
+        Partials.Channel,
+        Partials.Reaction,
+        Partials.User,
+        Partials.GuildMember,
+        Partials.GuildScheduledEvent
+    ],
 });
 
 ["commands", "buttons", "selects"].forEach(
     (x) => (client[x] = new Collection())
 );
 
-["EventUtil", "CommandUtil", "ButtonUtil", "SelectUtil"].forEach((handler) => {
+["EventUtil", "CommandUtil", "ButtonUtil"/*, "SelectUtil"*/].forEach((handler) => {
     require(`./Utils/Handlers/${handler}`)(client);
 });
 

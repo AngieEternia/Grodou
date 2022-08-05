@@ -1,4 +1,4 @@
-const { MessageAttachment, MessageEmbed } = require('discord.js')
+const { AttachmentBuilder, EmbedBuilder } = require('discord.js')
 const Logger = require(`../../Utils/Logger`);
 
 module.exports = {
@@ -7,8 +7,8 @@ module.exports = {
     async execute(client, guild) {
 
         // Message de Grodou quand il arrive sur un nouveau serveur
-        //const thumbnail = new MessageAttachment(`./Img/smiles/grodouSmile.png`, `miniature.png`);
-        let joinEmbed = new MessageEmbed()
+        const thumbnail = new AttachmentBuilder(`./Img/smiles/grodouSmile.png`, { name: `miniature.png` });
+        let joinEmbed = new EmbedBuilder()
             .setColor(client.color)
             .setTitle("Oh, bien le bonjour, merci pour l'invitation ! 👋")
             //.setThumbnail(`attachment://${thumbnail.name}`)

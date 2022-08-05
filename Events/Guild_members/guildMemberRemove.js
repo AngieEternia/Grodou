@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'guildMemberRemove',
@@ -8,7 +8,7 @@ module.exports = {
 
         const fetchKickLog = await member.guild.fetchAuditLogs({
             limit: 1,
-            type: 'MEMBER_KICK'
+            type: 20
         });
         const kickLog = fetchKickLog.entries.first();
         const targetKick = kickLog.target;
@@ -17,7 +17,7 @@ module.exports = {
 
         const fetchBanLog = await member.guild.fetchAuditLogs({
             limit: 1,
-            type: 'MEMBER_BAN_ADD'
+            type: 22
         });
         const banLog = fetchBanLog.entries.first();
         const targetBan = banLog.target;
@@ -27,7 +27,7 @@ module.exports = {
         let leaveGuild = `👋 L'utilisateur a quitté ${member.guild.name} !`
         if (isMemberKick || isMemberBan) leaveGuild = `❌ L'utilisateur a été modéré et a été écarté du serveur !`;
 
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setAuthor({
                 name: `${member.user.tag} (id : ${member.id})`,
                 iconURL: member.user.displayAvatarURL(),

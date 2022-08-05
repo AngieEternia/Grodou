@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'softban',
@@ -12,13 +12,13 @@ module.exports = {
         {
             name: 'utilisateur',
             description: 'Le membre à bannir',
-            type: 'USER',
+            type: ApplicationCommandOptionType.User,
             required: true
         },
         {
             name: 'durée',
             description: 'La durée du bannissement en jour',
-            type: 'NUMBER',
+            type: ApplicationCommandOptionType.Number,
             minValue: 1,
             maxValue: 7,
             required: true
@@ -26,7 +26,7 @@ module.exports = {
         {
             name: 'raison',
             description: 'La raison du bannissement',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: false
         }
     ],

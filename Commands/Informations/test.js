@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require("discord.js")
 
 module.exports = {
     name: 'test',
@@ -10,7 +10,7 @@ module.exports = {
     description: "Ceci est un test",
 
     runInteraction(client, interaction) {
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setColor(client.color)
             .setDescription("ceci est un test")
 

@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'unmute',
@@ -12,13 +12,13 @@ module.exports = {
         {
             name: 'utilisateur',
             description: 'Le membre à exclure',
-            type: 'USER',
+            type: ApplicationCommandOptionType.User,
             required: true
         },
         {
             name: 'raison',
             description: 'La raison de l\'exclusion',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: false
         }
     ],
@@ -38,7 +38,7 @@ module.exports = {
         } catch (err) { }
         await interaction.reply({ content: `**⚠️ \`${interaction.user.tag}\` a rendu la parole à \`${target.displayName}\` avec succès <:grodouAH:520329433752797184> !\n🪧 Raison : 🙶 \`${reason}\` 🙸**`, fetchReply: true });
 
-        let Embed = new MessageEmbed()
+        let Embed = new EmbedBuilder()
             .setColor("#c0ff00")
             .setAuthor({
                 name: `Utilisateur ayant récupéré la parole`,

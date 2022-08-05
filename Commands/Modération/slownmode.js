@@ -1,3 +1,5 @@
+const { ApplicationCommandOptionType } = require('discord.js');
+
 module.exports = {
     name: 'slowmode',
     category: "Modération",
@@ -10,20 +12,20 @@ module.exports = {
         {
             name: 'nombre',
             description: 'Choisir la valeur du mode lent en seconde',
-            type: 'NUMBER',
+            type: ApplicationCommandOptionType.Number,
             required: true
         },
         {
             name: 'salon',
             description: 'Le salon à ralentir',
-            type: 'CHANNEL',
-            channelTypes: ["GUILD_TEXT"],
+            type: ApplicationCommandOptionType.Channel,
+            channelTypes: 0,
             required: false
         },
         {
             name: 'raison',
             description: 'La raison du mode lent',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: false
         }
     ],

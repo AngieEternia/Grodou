@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'guildBanAdd',
@@ -16,7 +16,7 @@ module.exports = {
             const LatestBan = AuditsLogs.entries.first();
             const { executor, target, reason } = LatestBan;
 
-            let Embed = new MessageEmbed()
+            let Embed = new EmbedBuilder()
                 .setColor("#ff0000")
                 .setAuthor({
                     name: `Utilisateur banni`,

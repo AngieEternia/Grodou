@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { ApplicationCommandType, EmbedBuilder } = require('discord.js')
 const ms = require(`ms`)
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],
-    type: 'USER',
+    type: ApplicationCommandType.User,
     async runInteraction(client, interaction) {
         const member = await interaction.guild.members.fetch(interaction.targetId)
 
@@ -88,11 +88,11 @@ module.exports = {
             connexionUser = "Inconnue";
         }
 
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setAuthor({ name: `${member.user.tag} (${member.id})`, iconURL: member.user.bot ? 'https://cdn.discordapp.com/emojis/1002260214642384906.png' : 'https://cdn.discordapp.com/emojis/1002260213434421288.png' })
             .setColor(client.color)
             .setThumbnail(member.user.displayAvatarURL())
-            .addFields(
+            .addFields([
                 {
                     name: `<:sep1:975384221138948126>  Informations sur l'utilisateur  <:sep3:975384220849557545>`,
                     value: [
@@ -120,7 +120,7 @@ module.exports = {
                         ``,
                     ].join("\n")
                 }
-            )
+            ])
 
         interaction.reply({ embeds: [embed] })
     }

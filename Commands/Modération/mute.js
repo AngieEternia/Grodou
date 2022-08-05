@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const ms = require('ms');
 
 module.exports = {
@@ -13,19 +13,19 @@ module.exports = {
         {
             name: 'utilisateur',
             description: 'Le membre à exclure',
-            type: 'USER',
+            type: ApplicationCommandOptionType.User,
             required: true
         },
         {
             name: 'durée',
             description: 'La durée de l\'exclusion',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: true
         },
         {
             name: 'raison',
             description: 'La raison de l\'exclusion',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: false
         }
     ],
@@ -38,6 +38,7 @@ module.exports = {
         const convertedTime = ms(duration);
         let reason = interaction.options.getString('raison');
         if (!reason) reason = "Aucune raison donnée";
+        let convertedDuration = ms(ms(duration), { long: true })
 
         if (!target.moderatable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être exclue... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
         if (!convertedTime) return interaction.reply({ content: `❌ Woups ! Il faut spécifier une durée valable ! <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
@@ -55,10 +56,9 @@ module.exports = {
             if (err) throw err;
         })
 
-        let convertedDuration = ms(ms(duration), { long: true })
         let mapObj = { second: "seconde", minute: "minute", hour: "heure", day: "jour" } // mini dico pour traduire ms()
         convertedDuration = convertedDuration.replace(/second|minute|hour|day/gi, function (matched) { return mapObj[matched]; });
-        let Embed = new MessageEmbed()
+        let Embed = new EmbedBuilder()
             .setColor("#ffe400")
             .setAuthor({
                 name: `Utilisateur exclu`,

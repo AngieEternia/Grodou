@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'kick',
@@ -12,13 +12,13 @@ module.exports = {
         {
             name: 'utilisateur',
             description: 'Le membre à expulser',
-            type: 'USER',
+            type: ApplicationCommandOptionType.User,
             required: true
         },
         {
             name: 'raison',
             description: 'La raison de l\'expulsion',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: false
         }
     ],
@@ -46,14 +46,14 @@ module.exports = {
             if (err) throw err;
         })
 
-        let Embed = new MessageEmbed()
+        let Embed = new EmbedBuilder()
             .setColor("#d05c5c")
             .setAuthor({
                 name: `Utilisateur expulsé`,
                 iconURL: "https://cdn.discordapp.com/emojis/979738900585148437.png",
             })
             //.setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-            .setDescription(`◽️ Expulsé :** ${target} (id : \`${target.id}\`)\n◽️ **Auteur de l'expulsion :** ${interaction.user}\n◽️ **Motif de l'expulsion :** \`\`\`${reason}\`\`\``)
+            .setDescription(`◽️ **Expulsé :** ${target} (id : \`${target.id}\`)\n◽️ **Auteur de l'expulsion :** ${interaction.user}\n◽️ **Motif de l'expulsion :** \`\`\`${reason}\`\`\``)
             .setTimestamp();
 
         db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${interaction.guild.id}`, async (err, req) => {

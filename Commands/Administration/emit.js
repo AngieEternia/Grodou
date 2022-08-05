@@ -1,3 +1,5 @@
+const { ApplicationCommandOptionType } = require('discord.js');
+
 module.exports = {
     name: 'emit',
     category: "Administration",
@@ -10,7 +12,7 @@ module.exports = {
         {
             name: 'event',
             description: 'Choisir un évènement à emettre',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: true,
             choices: [
                 {

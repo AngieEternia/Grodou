@@ -1,4 +1,4 @@
-const { MessageEmbed } = require('discord.js')
+const { ApplicationCommandType, EmbedBuilder } = require('discord.js')
 const ms = require(`ms`)
 
 module.exports = {
@@ -8,11 +8,11 @@ module.exports = {
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],
-    type: 'USER',
+    type: ApplicationCommandType.User,
     async runInteraction(client, interaction) {
         const member = await interaction.guild.members.fetch(interaction.targetId)
 
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setTitle(`Voici l'avatar de ${member.user.username} !`)
             .setColor(client.color)
             .setImage(member.user.displayAvatarURL({ dynamic: true, size: 4096, format: 'png' }))

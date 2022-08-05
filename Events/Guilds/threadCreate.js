@@ -1,14 +1,14 @@
-const { MessageEmbed } = require('discord.js')
+const { EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'threadCreate',
     once: false,
     async execute(client, thread, newlyCreated) {
 
-        if (thread.isText()) thread.join();
+        if (thread.isTextBased()) thread.join();
 
         const db = client.db;
-        const embed = new MessageEmbed()
+        const embed = new EmbedBuilder()
             .setColor("#41b8e4")
             .setAuthor({
                 name: `Création d'un fil`,

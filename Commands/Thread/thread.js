@@ -1,4 +1,4 @@
-const { MessageEmbed, TextChannel } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'thread',
@@ -12,18 +12,18 @@ module.exports = {
         {
             name: 'create',
             description: 'Créer un nouveau fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
             options: [
                 {
                     name: 'nom',
                     description: 'Le nom du fil à créer',
-                    type: 'STRING',
+                    type: ApplicationCommandOptionType.String,
                     required: true
                 },
                 {
                     name: 'message',
                     description: 'Le premier message dans le fil',
-                    type: 'STRING',
+                    type: ApplicationCommandOptionType.String,
                     required: false
                 }
             ]
@@ -31,22 +31,22 @@ module.exports = {
         {
             name: 'join',
             description: 'Ajouter Grodou au fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
         },
         {
             name: 'leave',
             description: 'Enlever Grodou du fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
         },
         {
             name: 'add',
             description: 'Ajouter un utilisateur au fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
             options: [
                 {
                     name: 'utilisateur',
                     description: 'Le membre à ajouter au fil',
-                    type: 'USER',
+                    type: ApplicationCommandOptionType.User,
                     required: true
                 }
             ]
@@ -54,12 +54,12 @@ module.exports = {
         {
             name: 'remove',
             description: 'Retirer un utilisateur du fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
             options: [
                 {
                     name: 'utilisateur',
                     description: 'Le membre à retirer du fil',
-                    type: 'USER',
+                    type: ApplicationCommandOptionType.User,
                     required: true
                 }
             ]
@@ -67,21 +67,21 @@ module.exports = {
         {
             name: 'archive',
             description: 'Archiver un fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
         },
         {
             name: 'unarchive',
             description: 'Désarchiver un fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
         },
         {
             name: 'delete',
             description: 'Supprimer un fil',
-            type: 'SUB_COMMAND',
+            type: ApplicationCommandOptionType.Subcommand,
             options: [{
                 name: 'raison',
                 description: 'La raison de la suppression',
-                type: 'STRING',
+                type: ApplicationCommandOptionType.String,
                 required: false
             }]
         },
@@ -96,7 +96,7 @@ module.exports = {
                 if (interaction.options.getSubcommand() === 'create') {
                     const threadName = interaction.options.getString('nom');
                     const threadMess = interaction.options.getString('message');
-                    if (thread instanceof TextChannel) {
+                    if (thread.isTextBased()) {
                         await thread.threads.create({
                             name: threadName,
                             reason: threadMess
@@ -143,7 +143,7 @@ module.exports = {
                 let reason = interaction.options.getString('raison');
                 if (!reason) reason = "Aucune raison donnée";
                 const logChannel = client.channels.cache.get(req[0].channelID)
-                const embed = new MessageEmbed()
+                const embed = new EmbedBuilder()
                     .setColor("#41b8e4")
                     .setAuthor({
                         name: `Suppression d'un fil`,
