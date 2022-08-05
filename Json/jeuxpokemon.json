@@ -1,0 +1,20 @@
+{
+    "liste": [
+        {
+            "name": ["ecarlate", "violet", "ev", "scarlet"],
+            "truename": "Pokémon Écarlate et Violet"
+        },
+        {
+            "name": ["lpa", "pla", "arceus", "legend", "legends", "legendes", "legende"],
+            "truename": "Légendes Pokémon : Arceus"
+        },
+        {
+            "name": ["epee", "bouclier", "sword", "shield", "eb", "swsh"],
+            "truename": "Pokémon Épée et Bouclier"
+        },
+        {
+            "name": ["rouge", "bleu", "rb"],
+            "truename": "Pokémon Rouge et Bleu"
+        }
+    ]
+}

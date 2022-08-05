@@ -1,0 +1,58 @@
+{
+	"Défis généraux": [
+		{
+			"Jetez tous vos objets de soin": "",
+			"Jetez toutes vos balls": "",
+			"Ne capturez aucun pokémon jusqu'au prochain tirage": "",
+			"Refusez tout apprentissage de nouvelles capacités": "",
+			"Utilisez au moins une attaque de statut par Pokémon adverse contre le prochain champion d'arène": "",
+			"N'utilisez qu'un seul Pokémon pour battre le prochain champion": "",
+			"Renommez tous les nouveaux Pokémon capturés en « Prout »": "",
+			"Dépensez au maximum votre argent + les éventuelles sommes économisées (par exemple chez Maman).": "",
+			"Hoho c'est ton jour de chance ! Aucune contrainte ne t'est imposée, profite de ton aventure !": "",
+			"Attrapez toutes les espèces de Pokémon présent sur la prochaine route": "",
+			"Vous ne pouvez pas utiliser d'objets de soin contre le prochain champion d'arène/doyen/membre du conseil 4 que vous combattrez.": "",
+			"Renommez tous vos Pokémon avec des noms de Digimon": ""
+		}
+	],
+	"RB": [
+		{
+			"Choisissez Salamèche comme Starter": "",
+			"Choisissez Bulbizarre comme Starter": "",
+			"Choisissez Carapuce comme Starter": "",
+			"Retirez le starter de l'équipe dès que possible": "",
+			"Ne faites évoluer aucun Pokémon": "",
+			"N'utilisez pas les oiseaux légendaires": "",
+			"Choisissez Kicklee au dojo de Safrania et mettez-le dans votre team pour battre Morgane": "",
+			"Choisissez Tygnon au dojo de Safrania et mettez-le dans votre team pour battre Morgane": "",
+			"Nommez votre rival en « Un con »": "",
+			"Vous devez avoir dans votre équipe finale au moins un Pokémon issu d'une famille dans laquelle une évolution s'effectue grâce à la Pierre Lune (réaliser une telle évolution n'est toutefois pas obligatoire). Vous ne pouvez utiliser des Pierre Lune à des fins d'évolution uniquement lors d'un jour de Pleine Lune, Premier quartier, Dernier quartier ou Nouvelle Lune dans la vie réelle.": "",
+			"Major Bob doit être le septième champion que vous battez.": "",
+			"Vous ne pouvez pas soigner le poison, la paralysie, le sommeil et la confusion à l'aide d'objets": ""
+		}
+	],
+	"J": [
+		{
+			"Gardez les 3 starters offerts dans votre équipe durant toute la partie": "",
+			"Mettez un Pokémon attrapé au Safari dans votre équipe pour battre Auguste": "",
+			"Capturez un Rondoudou et faites le évoluer en Grodoudou, vous l'appellerez « Sir Grodoy »": "",
+			"La seule famille de Pokémon autorisée à apprendre la CS Coupe est celle de Salamèche": "",
+			"Vous ne pouvez utiliser que Pikachu pour affronter le Major Bob": "",
+			"Appelez votre Pikachu « Jean-Luc »": "",
+			"Vous devez affronter la ligue avec l'un des Pokémon que Sacha a capturé dans la saison 1 et qu'il détient toujours (hors starters), à savoir Krabboss, Grotadmorv ou Tauros.": ""
+		}
+	],
+	"OAC": [
+		{
+			"Utilisez uniquement votre starter pour battre Blanche": "",
+			"Appelez le rival Gérard.": "",
+			"Vous ne pouvez posséder que 6 Pokémon, si vous en avez plus, libérez-en pour ne plus dépasser ce chiffre.": "",
+			"Choisissez Germignon comme Starter": "",
+			"Vous ne pouvez utiliser aucun objet de soin": "",
+			"Utilisez uniquement le Léviator Rouge pour battre Fredo": "",
+			"Battez la Team Rocket dans la tour Radio avec seulement 3 Pokémon": "",
+			"Dans OAC, vous devez capturer tous les Pokémon qui évoluent avec la Pierre Lune avec  une Lune Ball... même si elle est buggée et que ça ne sert à rien": "",
+			"Les Pokémon d'un type « physique » ne peuvent apprendre que des attaques de types classifiés comme physique. \nLes Pokémon d'un type « spécial » ne peuvent apprendre que des attaques de types classifiés comme spécial .(Par exemple, un Pokémon de type Normal ne peut apprendre que des attaques de type Normal, Combat, Vol, Poison, Sol, Roche, Insecte, Spectre et Acier. Un Pokémon de type Feu ne peut apprendre que des attaques de type Feu, Eau, Plante, Elektrik, Psy, Glace, Dragon et Ténèbres.) Si le Pokémon a un double type, c'est son premier type qui est pris en considération.": ""
+		}
+	]
+}

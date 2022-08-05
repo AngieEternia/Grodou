@@ -1,0 +1,235 @@
+{
+    "comment1": "Définit ici le préfix à utiliser globalement.",
+    "prefix": "g!",
+    "comment2": "Définit ici l'ensemble des salutations possibles de Grodou.",
+    "bonjour": [
+        "Hello there <:grodou2:715507273728000001>",
+        "Salut la compagnie !",
+        "Bien le bonjour <:grodou1:715507273706897418>",
+        "Oush oush <:grotrigger:697176055936712715>"
+    ],
+    "comment3": "Les réponses randoms quand on se plante dans la commande !",
+    "BadCommande": [
+        "Bah, t'essaye de faire quoi là ? Je n'ai pas encore appris cette capacité ! <:grodou2:715507273728000001>",
+        "Euh je ne sais pas ce que tu essayes de faire, mais je ne sais pas faire ça <:grodou6:715507273623142462>",
+        "La commande que vous avez demandée n'est plus attribuée. Veuillez réessayer ultérieurement. <:grodou3:715507273623142461>",
+        "Bien tenté, mais même avec un *Action Replay*, je ne peux pas faire ça. <:grodou2:715507273728000001>",
+        "Et la marmotte, elle met le chocolat dans le papier d'alu aussi ? <:grodou3:715507273623142461>",
+        "J'peux pas faire ça, arrête ! <:grodouNO:520329945168347157>",
+        "Et ta sœur, elle bat le beurre ?? <:grodouNO:520329945168347157>",
+        "<:n:899680329525235842> <:o:899680329542021152> <:p:899680331924406352> <:e:899680329370054706>   <:grodouNO:520329945168347157>"
+    ],
+    "comment4": "Définit ici les mots qui irritent Grodou...",
+    "forbiddenWords": [
+        "tg","Tg", "TG", "TAGGLE", "taggle", "Taggle", "TA GUEULE", "ta gueule", "Ta gueule", "tais toi", "tais-toi", "la ferme"
+    ],
+    "comment5": "... et ses possibles réponses.",
+    "repInsultes": [
+        "<:grodou4:715507273434398784>",
+        "<:grodou8:715507273484468226>",
+        "<:grodou7:715507273954492436>",
+        "Non.",
+        "Mais pourquoi tu m'insultes ? <:grodou5:715507273803235359>"
+    ],
+    "comment6": "Définit ici les interrogations profondes de Grodou...",
+    "repHorny": [
+        "Ca veut dire quoi « horny » <:grodou3:715507273623142461> ?",
+        "<@!547112029350264833>... <:omagad:618129001361309716>",
+        "Wesh ça commence à gratter un peu... OH NON JE PARLE COMME VOLCAPUTE <:grodou2:715507273728000001>",
+        "Mais je suis pas horny, ça va pas bien !? <:grodou2:715507273728000001>",
+        "Chi po horny mi lo",
+        "Vous savez ce qu'on dit ? Sortez couvert !"
+    ],
+    "comment7": "Là, ça se complique un peu parce que Grodou a plein de façons de réagir aux pommes...",
+    "petites_pommes": [
+        "pomme",
+        "Pomme"
+    ],
+    "petites_rep": [
+        "Des pommes !? Où ça des pommes ??!! <:grodou6:715507273623142462>",
+        "Mangez des pommes !",
+        "Oh ouiiii, vive les pommes, j'adore ça <:grodou1:715507273706897418>",
+        "Tu aimes les pommes ? Continue.",
+        "J'espère que t'es pas allergique aux pommes ! <:grodouNO:520329945168347157>",
+        "Hier j'ai mangé une pomme.\n\n\n\n\n\n\n\n\n<:grodou3:715507273623142461>",
+        "Touche pas à mes pommes toi ! <:grodou2:715507273728000001>"
+    ],
+    "grosses_pommes": [
+        "POMMES",
+        "POMME"
+    ],
+    "grosses_rep": [
+        "ON NE BOUGE PLUS, CECI EST UNE PRISE DE POMMES <:grodou2:715507273728000001>",
+        "DONNE-MOI CES POMMES TOUT DE SUITE <:grodou8:715507273484468226>",
+        "EH OH, MOI AUSSI JE PEUX CRIER POUR DES POMMES D'ABORD <:grodou2:715507273728000001>",
+        "P-P-A-P",
+        "https://youtu.be/NfuiB52K7X8?t=6",
+        "ARRÊTE DE CRIER J'SUIS PAS SOURD ! <:grodouNO:520329945168347157>"
+    ],
+    "emoji_pomme": [
+        "🍎"
+    ],
+    "emoji_rep": [
+        "🍎🍎🍎<:groAH1:585558960719790206><:groAH2:523441414307315723><:groAH1:585558960719790206>🍎🍎🍎",
+        "Owiiii viens ! On fait une tarte aux pommes !",
+        "Tu sais ce qu'on dit ? Faut manger au moins 5 Pommes par jours. Quoi ? C'est pas ça ?! <:grodou6:715507273623142462>",
+        "J'espère pour toi que c'est des Pommes Parfaites, sinon... <:grotrigger:697176055936712715>"
+    ],
+    "emoji_pomme_verte": [
+        "🍏"
+    ],
+    "emoji_rep_verte": [
+        "Beurk, c'est pas une Pomme Parfaite ça 🤢"
+    ],
+    "trolls": [
+        "https://tenor.com/view/issou-gif-6142112",
+        "Je ne crois pas non <:grodou5:715507273803235359>",
+        "<:grodou2:715507273728000001>",
+        "<:grodou3:715507273623142461>",
+        "<a:lmao:940980851037044806>",
+        "C'est cela oui... <:grodou3:715507273623142461>",
+        "https://tenor.com/view/ok-okay-gif-5307535",
+        "Le WQT est un animal aquatique nocturne.",
+        "Hey, vous savez quoi ? Non ? Bah moi non plus. <:grodou3:715507273623142461>",
+        "T'es vraiment sûr de toi sur ce coup-là, dis ? <:grodouthink:895279972820865044>",
+        "Mhhhhh... <:grodouthink:895279972820865044>",
+        "Il faut toujours garder un Nergaprout avec soi, j'dis ça j'dis rien.",
+        "AH OUI OUI OUI OUI OUI !!!",
+        "Vous savez, moi je ne crois pas qu’il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd’hui avec vous, je dirais que c’est d’abord des rencontres. Des gens qui m’ont tendu la main, peut-être à un moment où je ne pouvais pas, où j’étais seul chez moi. Et c’est assez curieux de se dire que les hasards, les rencontres forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l’interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n’est pas mon cas, comme je disais là, puisque moi au contraire, j’ai pu ; et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie... je ne suis qu’amour ! Et finalement, quand des gens me disent « Mais comment fais-tu pour avoir cette humanité ? », je leur réponds très simplement que c’est ce goût de l’amour, ce goût donc qui m’a poussé aujourd’hui à entreprendre une construction mécanique... mais demain qui sait ? Peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi.",
+        "Ca mérite un Ultimapoing en pleine pomme tout ça, moi j'dis ! <:grodouNO:520329945168347157>",
+        "https://eternia.fr/public/media/grodoubot/mhhh.gif",
+        "Dis-moi pas qu'c'est pas vrai !? <:grodou6:715507273623142462>",
+        "Je sais pas vous, mais j'ai une grosse envie de ping quelqu'un ici pour rien, juste comme ça <:grodou3:715507273623142461>",
+        "Oui oui oui, c'est très intéressant ce que tu dis mais... Ouais, non, tout bien réfléchis, ça m'intéresse pas <:grodou3:715507273623142461>",
+        "L'autre jour, Évangie m'a dit que j'étais insupportable, t'y crois toi !? <:grodou8:715507273484468226>",
+        "💤💤💤 <:grodou9:903378318039068786>... Oh pardon, je me suis endormi en te lisant <:grodou8:715507273484468226>",
+        "<a:lmao:940980851037044806><a:lmao:940980851037044806><a:lmao:940980851037044806><:arrete:898640048348614696>",
+        "Meurs, pourriture communiste !",
+        "Je suis le pape et j'attends ma sœur.",
+        "Il est interdit de manger de la choucroute ici. <:grodou2:903378318668222575>",
+        "Tu veux pas un chewing-gum ? <:grodou5:903378318013894669>",
+        "Vous pouvez tromper quelques personnes tout le temps et tout le monde quelques fois, mais vous ne pouvez pas tromper tout le monde tout le temps !",
+        "Tue-moi, mais la bouche fermée, par pitié.",
+        "Tu bluffes, Martoni.",
+        "Je vois pas le rapport <:grodou3:715507273623142461>.",
+        "Il ne peut plus rien nous arriver d'affreux, maintenant.",
+        "Wow, tout le monde se calme ! Ceci est un Police Python 357 Magnum et, avec ça mon pôte, j'te fais un trou dans l'buffet, tu fais trois fois l'tour de ton slip, direction Pekin !",
+        "Oh, c'est bon, y'a pas de quoi vermifuger un abribus.",
+        "Tu m'auras pas comme ça Sangokaï. J'annonce, coup de pied latéral en pleine face.",
+        "Une fois, j'me suis couché il était minuit dix. Bonjour comment j'étais fatigué !",
+        "Tu es rapide, c'est bien, mais... es-tu résistant ?",
+        "Un chien vaut mieux que deux kilos de rats.",
+        "Je suis une racaille ! Une racaille de Shanghai !",
+        "Être ou ne pas être, telle est la question sinusoïdale de l'anachorète hypocondriaque.",
+        "Mais cela ne nous regarde pas...!",
+        "C'est toi que je t'aimeuh, vachement beaucoup ! 🎶",
+        "J'ai beau être matinal, j'ai mal. <:arrete:898640048348614696>",
+        "Le tabac c'est tabou, on en viendra tous à bout !",
+        "100 patates !",
+        "Pour la vieille c'est cyanure, trois cuillères à soupe. <:grotrigger:903378319171538984>",
+        "J'ai une question. Je voudrais savoir : « sac à merde », c'est une insulte ou pas ? <:grodou6:715507273623142462>",
+        "Eh fais gaffe, t'as failli écraser un Aristochat !",
+        "Deux demi-frères, ça n'a jamais fait un frère !",
+        "Vive la France !",
+        "Une société c’est comme une montgolfière, pour qu’elle décolle faut lâcher du lest de temps en temps.",
+        "L'autre fois, j'étais en boîte, y'a le DJ qui s'est carrément pris un lampadaire dans la gueule.",
+        "Un chagrin d'amour, c'est comme l'équipe de Marseille sans Bernard Tapie.",
+        "Il ne me reste plus que le PQ !",
+        "Le hasard n'existe pas ! Diogène de Cynople l'a amplement démontré, le simple fait que je lève mon bras n'est pas le fruit du hasard mais la cause d'un enchainement de causes et d'effets qui se rallie à des milliers de causes et d'effets et ainsi jusqu'à l'infini...",
+        "Dans ma jeunesse, j'ai émasculé un scarabée à trente pas ! Veux-tu risquer ta descendance ?",
+        "Et toi, arrête donc de voler la thune des pauvres gens, grognasse !",
+        "Vous êtes en train de me faciliter le transit intestinal !",
+        "Tu vas faire n'golo n'golo dans la case ? <:grodousmirk:895279972955078696>",
+        "C'est okaaaaaaaaay !!!",
+        "Mais lâchez-moi, sale nazi !",
+        "J’emmène pas la clocharde ! Ma voiture c’est pas l’arche de Noé !",
+        "Qu'est-ce que c'est que ce binz ?",
+        "Tout le monde sait courir au ralenti. Courir au ralenti, c'est marcher.",
+        "Annule-moi un peu ce rendez-vous avec ces deux imbéciles de l'école de TV. J'ai pas le temps, j'ai matériellement pas le temps de faire ça. Des trous de cul pareil ça m'intéresse pas.",
+        "En parlant de vieille truie, toi comment ça va ?",
+        "Tiens, mets tes lunettes va couillon. Tu verras peut-être plus clair la prochaine fois !",
+        "Nom de Dieu, qu'est-ce que c'est qu'ce boordel làààààààààààà !! De Dieeeu !",
+        "Je n'en peux plus, je suis au bout du rouleau, j'ai envie de rentrer, me foutre mes savates et terminé bonsoir !",
+        "Dis, on t'a jamais appris à manger avec la bouche fermée toi ? C'est à toi qu'je cause hein ! J'ai l'impression d'être à côté d'un camion poubelle qui travaille moi, ici !",
+        "Mieux vaut un bon arrangement qu'un mauvais procès comme on dit.",
+        "C'est toi qui va décharger l'cochon ? T'es épais comme un câble de frein à main.",
+        "On voit où est le pognon hein. C'est pas une baraque ici, c'est un centre de vacances.",
+        "C'est moi le king de la route ici !",
+        "Pourquoi tu photographies que des adolescentes nues ?",
+        "Un petit clic vaut mieux qu'une grande claque !",
+        "La schnouf, c'est un fléau !",
+        "J'savais pas que tu roulais dans un kinder.",
+        "Ça va ? c'est pas trop dur comme boulot ? Eh, si tu veux ramasser des balles, tu peux toujours aller à Roland Garros, j'connais bien le big boss là bas !",
+        "Jour, nuit, jour, nuit...",
+        "Silence maraud, je parlemente.",
+        "Bourse molle !",
+        "Quand tu te mouches t’as pas l’impression de serrer la main à un pote ?",
+        "Oh ! J’ai vu une grosse bête !",
+        "Mais dehors les romanos !",
+        "On va faire une rixe au Courtepaille.",
+        "Y’a moyen d’écrire correctement ?"
+    ],
+    "replies": [
+        "Oui ? C'est pour quoi ? <:grodou3:715507273623142461>",
+        "Qui le demande ?",
+        "Bah, pourquoi tu me ping comme ça, hein ? <:grodou7:715507273954492436>",
+        "MAIS ARRÊTE DE ME PING POUR RIEN !!!",
+        "Ok. Je quitte Eternia.",
+        "J'ai pas le temps frangin, je dois buter Évangie... <:groAH2:523441414307315723>",
+        "Tu es triste ? Arrête. <:arrete:898640048348614696>",
+        "Tu me ping ? Arrête. <:arrete:898640048348614696>",
+        "<:groAH1:585558960719790206><:groAH2:523441414307315723><:groAH1:585558960719790206>",
+        "🍎🍎🍎🍎🍎✨"
+    ],
+    "message_id_autorole": "898934719377444875",
+    "message_id_autorole_twitter": "906125008148004894",
+    "message_id_autorole_activitéStaff": "920760228025348187",
+    "comment8": "Petite ref à StarWars...",
+    "hellothere": [
+        "Hello there", "HELLO THERE", "hello there"
+    ],
+    "starwars": [
+        "Général Kenobi",
+        "<:sabre_rouge:901151051422511195><:grodou3:715507273623142461><:sabre_vert:901151051774824509>"
+    ],
+    "quoi": [
+        "Quoi", "quoi", "QUOI"
+    ],
+    "coiffeur": [
+        "**FEUR**"
+    ],
+    "Belgique" : [
+        "Belgique", "BELGIQUE", "belgique", "belgik", "BELGIK", "Belgik", "Belle Gique", "belle gique", "BELLE GIQUE", "frite", "FRITE", "Frite"
+    ],
+    "Cadre" : [
+        "Cadre", "CADRE", "cadre", "kadre", "KADRE", "Kadre", "Kdr", "KDR", "kdr"
+    ],
+    "Vivant" : [
+        "vivant", "VIVANT", "Vivant", "Vivants", "VIVANTS", "Vivants"
+    ],
+    "comment9" : "La partie sur Halloween",
+    "questionWeen" : [
+        ""
+    ],
+    "pseudoHalloween" :[
+        "Scream Queen",
+        "Hannibal Lecter",
+        "Jigsaw",
+        "Ça",
+        "Dracula",
+        "Freddy Krueger",
+        "Chucky"
+    ],
+    "gifBonbons" :[
+        "https://tenor.com/view/despicable-me-agnes-candies-candy-sweets-gif-3447236",
+        "https://tenor.com/view/mr-bean-rowan-atkinson-bean-bean-movie-working-title-films-gif-15034599",
+        "https://tenor.com/view/halloween-candy-halloween-candy-candies-happy-halloween-gif-18733280",
+        "https://tenor.com/view/candy-sweet-candies-delicious-yummy-gif-5769440",
+        "https://tenor.com/view/candy-sour-gummi-worms-chocolate-junk-food-sweet-tooth-gif-6903322",
+        "https://tenor.com/view/candy-sweets-chocolate-chocolate-bar-pralinen-gif-20357261",
+        "https://tenor.com/view/sasha-spilberg-candies-gif-5951444",
+        "https://tenor.com/view/jelly-bean-candy-candies-gif-3971594",
+        "https://tenor.com/view/one-tree-hill-halloween-candy-halloween-treats-candies-gif-22865570",
+        "https://tenor.com/view/gifmop-wisch-mop-cute-building-gif-13231527"
+    ]
+}

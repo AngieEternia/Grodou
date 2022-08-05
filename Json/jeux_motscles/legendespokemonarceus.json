@@ -1,0 +1,34 @@
+{
+    "liste": [
+        {
+          "truename": "Légendes Pokémon : Arceus",
+            "keywords": {
+                "https://eternia.fr/fr/site/article/3217-legendes-pokemon-arceus/": ["accueil", "index"],
+                
+                "https://eternia.fr/fr/site/article/3963-legendes-pokemon-arceus-index-de-la-soluce/": ["soluce", "indexsoluce"],
+                "https://eternia.fr/fr/site/article/3961-legendes-pokemon-arceus-partie-1-retour-vers-le-passe/": ["partie1", "partie 1", "p1"],
+                "https://eternia.fr/fr/site/article/3962-legendes-pokemon-arceus-partie-2-devenir-membre-du-corps-des-chercheurs/": ["partie2", "partie 2", "p2"],
+                "https://eternia.fr/fr/site/article/3971-legendes-pokemon-arceus-partie-3-taches-pokedex-dans-les-plaines-obsidiennes/": ["partie3", "partie 3", "p3"],
+                "https://eternia.fr/fr/site/article/4235-legendes-pokemon-arceus-partie-4-cest-lheure-du-sermon-monsieur-le-baron/": ["partie4", "partie 4", "p4"],
+                "https://eternia.fr/fr/site/article/4237-legendes-pokemon-arceus-partie-5-en-route-pour-la-foret-lointaine/": ["partie5", "partie 5", "p5"],
+                "https://eternia.fr/fr/site/article/4240-legendes-pokemon-arceus-partie-6-hachecateur-le-roi-enrage-de-la-foret/": ["partie6", "partie 6", "p6"],
+
+                "https://eternia.fr/fr/site/article/3958-legendes-pokemon-arceus-liste-des-missions-principales/": ["mission", "missions", "principal", "principale", "principales", "missions principales", "mission principale"],
+                "https://eternia.fr/fr/site/article/3957-legendes-pokemon-arceus-liste-des-missions-secondaires/": ["mission", "missions", "secondaire", "secondaires", "missions secondaires", "mission secondaire"],
+
+                "https://eternia.fr/fr/site/article/3229-legendes-pokemon-arceus-pokedex-regional/": ["pokedex", "dex"],
+                "https://eternia.fr/fr/site/article/3751-legendes-pokemon-arceus-etymologie-des-nouveaux-pokemon/": ["etymologie", "etymologies"],
+                "https://eternia.fr/fr/site/article/3970-legendes-pokemon-arceus-descriptions-des-pokemon/": ["descriptions", "description"],
+
+                "https://eternia.fr/fr/site/article/3941-legendes-pokemon-arceus-les-starters/": ["starter", "starters"],
+                "https://eternia.fr/fr/site/article/3753-legendes-pokemon-arceus-les-nouveaux-pokemon-de-hisui/": ["hisui", "pokemon hisui"],
+                "https://eternia.fr/fr/site/article/3752-legendes-pokemon-arceus-les-nouvelles-formes-de-hisui/": ["forme", "formes", "forme hisui", "forme hisui", "formes hisui"],
+                "https://eternia.fr/fr/site/article/4233-legendes-pokemon-arceus-la-chasse-aux-chromatiques/": ["shiny", "shinies", "chromatique", "chromatiques"],
+                "https://eternia.fr/fr/site/article/4365-legendes-pokemon-arceus-les-pokemon-indisponibles/": ["indisponibles", "indisponible", "pokemon indisponibles", "pokemon indisponible", "pokemon indispo"],
+                "https://eternia.fr/fr/site/article/4366-legendes-pokemon-arceus-les-pokemon-non-capturables/": ["incapturables", "incapturable"],
+                "https://eternia.fr/fr/site/article/4367-legendes-pokemon-arceus-les-barons-indisponibles/": ["baron indispo", "barons indispo", "barons indisponibles", "baron indisponible"],
+                "https://eternia.fr/fr/site/article/4369-legendes-pokemon-arceus-completer-son-alphabet-zarbi/": ["zarbi", "zarbidex"]
+            }
+        }
+    ]
+}

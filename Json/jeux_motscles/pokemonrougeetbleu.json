@@ -1,0 +1,91 @@
+{
+    "liste": [
+        {
+          "truename": "Pokémon Rouge et Bleu",
+            "keywords": {
+                "https://eternia.fr/fr/site/article/394-pokemon-rouge-pokemon-bleu/": ["accueil", "index"],
+                "https://eternia.fr/fr/site/article/395-les-starters-explications-sur-les-pokemon-de-depart/": ["starter", "starters"],
+                "https://eternia.fr/fr/site/article/396-pokemon-rouge-et-pokemon-bleu-les-differents-personnages-des-jeux/": ["personnages", "personnage"],
+                "https://eternia.fr/fr/site/article/397-pokemon-rouge-et-pokemon-bleu-le-pokedex-liste-des-pokemon-de-kanto/": ["pokedex", "dex"],
+                "https://eternia.fr/fr/site/article/398-pokemon-rouge-et-pokemon-bleu-liste-des-attaques-et-informations/": ["attaque", "attaques", "attackdex"],
+                "https://eternia.fr/fr/site/article/399-pokemon-rouge-et-pokemon-bleu-table-des-types/": ["table", "types", "type"],
+
+                "https://eternia.fr/fr/site/article/4423-pokemon-rouge-et-bleu-index-de-la-soluce/": ["soluce", "indexsoluce"],
+                "https://eternia.fr/fr/site/article/400-pokemon-rouge-et-bleu-soluce-partie-1-le-depart/": ["partie1", "partie 1", "p1"],
+                "https://eternia.fr/fr/site/article/401-pokemon-rouge-et-bleu-soluce-partie-2-le-premier-badge/": ["partie2", "partie 2", "p2"],
+                "https://eternia.fr/fr/site/article/402-pokemon-rouge-et-bleu-soluce-partie-3-le-mont-selenite/": ["partie3", "partie 3", "p3"],
+                "https://eternia.fr/fr/site/article/403-pokemon-rouge-et-bleu-soluce-partie-4-le-deuxieme-badge/": ["partie4", "partie 4", "p4"],
+                "https://eternia.fr/fr/site/article/404-pokemon-rouge-et-bleu-soluce-partie-5-le-pokemaniac/": ["partie5", "partie 5", "p5"],
+                "https://eternia.fr/fr/site/article/405-pokemon-rouge-et-bleu-soluce-partie-6-loceane/": ["partie6", "partie 6", "p6"],
+                "https://eternia.fr/fr/site/article/406-pokemon-rouge-et-bleu-soluce-partie-7-le-troisieme-badge/": ["partie7", "partie 7", "p7"],
+                "https://eternia.fr/fr/site/article/407-pokemon-rouge-et-bleu-soluce-partie-8-la-grotte/": ["partie8", "partie 8", "p8"],
+                "https://eternia.fr/fr/site/article/408-pokemon-rouge-et-bleu-soluce-partie-9-arrivee-a-lavanville/": ["partie9", "partie 9", "p9"],
+                "https://eternia.fr/fr/site/article/409-pokemon-rouge-et-bleu-soluce-partie-10-le-quatrieme-badge/": ["partie10", "partie 10", "p10"],
+                "https://eternia.fr/fr/site/article/410-pokemon-rouge-et-bleu-soluce-partie-11-le-casino-rocket/": ["partie11", "partie 11", "p11"],
+                "https://eternia.fr/fr/site/article/411-pokemon-rouge-et-bleu-soluce-partie-12-la-tour-pokemon/": ["partie12", "partie 12", "p12"],
+                "https://eternia.fr/fr/site/article/412-pokemon-rouge-et-bleu-soluce-partie-13-le-cinquieme-badge/": ["partie13", "partie 13", "p13"],
+                "https://eternia.fr/fr/site/article/413-pokemon-rouge-et-bleu-soluce-partie-14-la-sylphe-sarl/": ["partie14", "partie 14", "p14"],
+                "https://eternia.fr/fr/site/article/414-pokemon-rouge-et-bleu-soluce-partie-15-le-sixieme-badge/": ["partie15", "partie 15", "p15"],
+                "https://eternia.fr/fr/site/article/415-pokemon-rouge-et-bleu-soluce-partie-16-les-iles-ecume/": ["partie16", "partie 16", "p16"],
+                "https://eternia.fr/fr/site/article/416-pokemon-rouge-et-bleu-soluce-partie-17-le-septieme-badge/": ["partie17", "partie 17", "p17"],
+                "https://eternia.fr/fr/site/article/417-pokemon-rouge-et-bleu-soluce-partie-18-le-huitieme-badge/": ["partie18", "partie 18", "p18"],
+                "https://eternia.fr/fr/site/article/418-pokemon-rouge-et-bleu-soluce-partie-19-la-route-victoire/": ["partie19", "partie 19", "p19"],
+                "https://eternia.fr/fr/site/article/419-pokemon-rouge-et-bleu-soluce-partie-20-la-ligue-pokemon/": ["partie20", "partie 20", "p20"],
+
+                "https://eternia.fr/fr/site/article/561-completer-le-pokedex-localisation-des-pokemon-sauvages/": ["localisation", "localisations", "sauvages", "sauvage"],
+                "https://eternia.fr/fr/site/article/562-guide-des-pokemon-exclusifs-a-chaque-version-du-jeu/": ["exclusifs", "exclusif"],
+                "https://eternia.fr/fr/site/article/563-pokemon-rouge-et-bleu-les-pokemon-interactifs/": ["interactifs", "interactif"],
+                "https://eternia.fr/fr/site/article/564-pokemon-rouge-et-bleu-les-echanges-internes-au-jeu/": ["echanges", "echange"],
+                "https://eternia.fr/fr/site/article/565-pokemon-rouge-et-pokemon-bleu-les-pokemon-offerts-dans-le-jeu/": ["offerts", "offert"],
+                "https://eternia.fr/fr/site/article/566-mah-che-passa-ye-me-transfourme-guide-des-evolutions-pokemon/": ["evolutions", "evolution"],
+
+                "https://eternia.fr/fr/site/article/567-les-pokemon-legendaires-guide-de-capture-et-informations/": ["legendaires", "legendaire"],
+                "https://eternia.fr/fr/site/article/568-capture-des-pokemon-legendaires-les-oiseaux-legendaires/": ["oiseau", "oiseaux", "artikodin", "electhor", "sulfura"],
+                "https://eternia.fr/fr/site/article/569-capture-des-pokemon-legendaires-mewtwo-le-pokemon-clone/": ["mewtwo", "deumiaou"],
+                "https://eternia.fr/fr/site/article/570-capture-des-pokemon-legendaires-mew-le-pokemon-rarissime/": ["mew"],
+
+                "https://eternia.fr/fr/site/article/571-guide-des-champions-pierre-dargenta/": ["pierre", "argenta", "badge roche"],
+                "https://eternia.fr/fr/site/article/572-guide-des-champions-ondine-dazuria/": ["ondine", "azuria", "badge cascade"],
+                "https://eternia.fr/fr/site/article/573-guide-des-champions-major-bob-de-carmin-sur-mer/": ["majorbob", "major bob", "carmin sur mer", "badge foudre"],
+                "https://eternia.fr/fr/site/article/574-guide-des-champions-erika-de-celadopole/": ["erika", "celadopole", "badge prisme"],
+                "https://eternia.fr/fr/site/article/575-guide-des-champions-koga-de-parmanie/": ["koga", "parmanie", "badge ame"],
+                "https://eternia.fr/fr/site/article/576-guide-des-champions-morgane-de-safrania/": ["morgane", "safrania", "badge marais"],
+                "https://eternia.fr/fr/site/article/577-guide-des-champions-auguste-de-cramoisile/": ["auguste", "cramoisile", "cramois ile", "badge volcan"],
+                "https://eternia.fr/fr/site/article/578-guide-des-champions-giovanni-de-jadielle/": ["giovanni", "argenta", "badge terre"],
+
+                "https://eternia.fr/fr/site/article/579-guide-du-conseil-4-olga-maitre-de-la-glace/": ["olga"],
+                "https://eternia.fr/fr/site/article/580-guide-du-conseil-4-aldo-maitre-des-combats/": ["aldo"],
+                "https://eternia.fr/fr/site/article/581-guide-du-conseil-4-agatha-maitre-des-fantomes/": ["agatha"],
+                "https://eternia.fr/fr/site/article/582-guide-du-conseil-4-peter-maitre-des-dragons/": ["peter"],
+
+                "https://eternia.fr/fr/site/article/583-pokemon-rouge-et-pokemon-bleu-le-rival-recapitulatif-des-differentes-confrontations/": ["rival", "regis", "blue"],
+                "https://eternia.fr/fr/site/article/584-pokemon-rouge-et-bleu-les-assistants-du-prof-chen-leurs-recompenses/": ["prof", "professeur", "assistants", "assistant"],
+                "https://eternia.fr/fr/site/article/585-pokemon-rouge-et-pokemon-bleu-les-personnages-utiles/": ["utiles", "utile"],
+
+                "https://eternia.fr/fr/site/article/586-jaime-bien-les-jeux-de-hasard-le-casino-de-celadopole/": ["casino", "hasard"],
+                "https://eternia.fr/fr/site/article/587-la-centrale-guide-du-lieu-et-pokemon-disponibles/": ["centrale"],
+                "https://eternia.fr/fr/site/article/588-le-parc-safari-de-parmanie-guide-du-parc-et-capture-de-pokemon/": ["parc", "parc safari", "safari"],
+                "https://eternia.fr/fr/site/article/589-les-iles-ecume-guide-du-lieu-et-capture-de-pokemon/": ["iles", "ecume", "ilesecume", "iles ecume"],
+                "https://eternia.fr/fr/site/article/590-la-grotte-inconnue-guide-du-lieu-et-capture-de-pokemon/": ["grotte", "grotteinconnue", "grotte inconnue"],
+                "https://eternia.fr/fr/site/article/591-cest-lheure-du-shopping-les-boutiques-pokemon/": ["boutique", "boutiques"],
+
+                "https://eternia.fr/fr/site/article/592-besoin-dun-peu-de-puissance-liste-des-ct-et-cs/": ["ct", "cs", "ct cs", "ctcs"],
+                "https://eternia.fr/fr/site/article/593-pokemon-rouge-et-pokemon-bleu-liste-des-objets-caches/": ["cache", "caches", "objetscaches", "objets caches"],
+                "https://eternia.fr/fr/site/article/594-pokemon-rouge-et-pokemon-bleu-liste-des-objets-disponibles/": ["objets", "objet"],
+
+                "https://eternia.fr/fr/site/article/595-pokemon-rouge-et-pokemon-bleu-glitch-le-clonage/": ["clonage"],
+                "https://eternia.fr/fr/site/article/596-pokemon-rouge-et-pokemon-bleu-glitch-bug-ville/": ["bugville"],
+                "https://eternia.fr/fr/site/article/597-pokemon-rouge-et-pokemon-bleu-glitch-le-old-man-glitch/": ["bug", "croupier", "mewbug"],
+
+                "https://eternia.fr/fr/site/article/390-ressources-sprites-des-pokemon/": ["sprites", "sprite"],
+                "https://eternia.fr/fr/site/article/391-ressources-sprites-des-dresseurs/": ["dresseurs", "dresseur"],
+                "https://eternia.fr/fr/site/article/393-pokemon-rouge-et-bleu-feat-ken-sugimori-les-artworks-officiels/": ["artworks", "artwork", "art", "sugimori"],
+                "https://eternia.fr/fr/site/article/392-pokemon-rouge-et-bleu-feat-ken-sugimori-les-autres-artworks/": ["autres"],
+
+                "https://eternia.fr/fr/site/article/598-faites-moins-de-bruit-je-nentends-rien-les-musiques-des-jeux/": ["musiques", "musique"],
+                "https://eternia.fr/fr/site/article/599-videos-pokemon-rouge-et-pokemon-bleu-les-trailers-et-publicites/": ["trailer", "trailers", "video", "videos"],
+                "https://eternia.fr/fr/site/article/600-eh-mewtwo-dessine-moi-un-pokemon-les-screenshots-du-jeu/": ["screen", "screens", "screenshot", "screenshots"]
+            }
+        }
+    ]
+}
