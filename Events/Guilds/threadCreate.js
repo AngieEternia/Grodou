@@ -17,7 +17,7 @@ module.exports = {
             .setDescription(`◽️ **Accès au fil :** <#${thread.id}>\n◽️ **Nom du fil :** \`\`\`${thread.name}\`\`\``)
             .setTimestamp()
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${thread.guild.id}`, async (err, req) => {
+        db.query(`SELECT * FROM logs WHERE type = 'other' AND guildID = ${thread.guild.id}`, async (err, req) => {
 
             if (req.length < 1) return;
             else {

@@ -88,7 +88,7 @@ module.exports = {
     ],
     async runInteraction(client, interaction) {
         const db = client.db;
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${interaction.guild.id}`, async (err, req) => {
+        db.query(`SELECT * FROM logs WHERE type = 'other' AND guildID = ${interaction.guild.id}`, async (err, req) => {
 
             let thread = interaction.channel;
 
@@ -142,18 +142,22 @@ module.exports = {
             else if (interaction.options.getSubcommand() === 'delete') {
                 let reason = interaction.options.getString('raison');
                 if (!reason) reason = "Aucune raison donnée";
-                const logChannel = client.channels.cache.get(req[0].channelID)
-                const embed = new EmbedBuilder()
-                    .setColor("#41b8e4")
-                    .setAuthor({
-                        name: `Suppression d'un fil`,
-                        iconURL: "https://cdn.discordapp.com/emojis/1004624701903081493.png",
-                    })
-                    .setDescription(`◽️ **Nom du fil :** \`\`\`${thread.name}\`\`\`\n◽️ **Motif de la suppression :** \`\`\`${reason}\`\`\``)
-                    .setTimestamp()
-
-                await logChannel.send({ embeds: [embed] });
                 await thread.delete();
+
+                if (req.length < 1) return;
+                else {
+                    const logChannel = client.channels.cache.get(req[0].channelID);
+                    const embed = new EmbedBuilder()
+                        .setColor("#41b8e4")
+                        .setAuthor({
+                            name: `Suppression d'un fil`,
+                            iconURL: "https://cdn.discordapp.com/emojis/1004624701903081493.png",
+                        })
+                        .setDescription(`◽️ **Nom du fil :** \`\`\`${thread.name}\`\`\`\n◽️ **Motif de la suppression :** \`\`\`${reason}\`\`\``)
+                        .setTimestamp()
+
+                    await logChannel.send({ embeds: [embed] });
+                }
 
             }
         })
