@@ -48,7 +48,7 @@ module.exports = {
             .setDescription(`◽️ **Parole retrouvée par :** ${target} (id : \`${target.id}\`)\n◽️ **Auteur de l'unmute :** ${interaction.user}\n◽️ **Motif de la reprise de parole :** \`\`\`${reason}\`\`\``)
             .setTimestamp();
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${interaction.guild.id}`, async (err, req) => {
+        db.query(`SELECT * FROM logs WHERE type = 'modo' AND guildID = ${interaction.guild.id}`, async (err, req) => {
 
             if (req.length < 1) return;
             else {

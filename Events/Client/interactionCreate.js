@@ -7,20 +7,39 @@ module.exports = {
     async execute(client, interaction) {
         if (interaction.type === InteractionType.ApplicationCommand) {
             const cmd = client.commands.get(interaction.commandName);
-            if (!cmd) return interaction.reply({ content: `Hey mon pote, cette commande n'existe pas !`, fetchReply: true });
+
+            if (!cmd) return interaction.reply({
+                content: `Hey mon pote, cette commande n'existe pas !`,
+                fetchReply: true
+            });
 
             let permissionsList = cmd.permissions.join(', ');
             permissionsList = permissionsList.replace(/CREATE_INSTANT_INVITE|KICK_MEMBERS|BAN_MEMBERS|ADMINISTRATOR|MANAGE_CHANNELS|MANAGE_GUILD|ADD_REACTIONS|VIEW_AUDIT_LOG|PRIORITY_SPEAKER|STREAM|VIEW_CHANNEL|SEND_MESSAGES|SEND_TTS_MESSAGES|MANAGE_MESSAGES|EMBED_LINKS|ATTACH_FILES|READ_MESSAGE_HISTORY|MENTION_EVERYONE|USE_EXTERNAL_EMOJIS|VIEW_GUILD_INSIGHTS|CONNECT|SPEAK|MUTE_MEMBERS|DEAFEN_MEMBERS|MOVE_MEMBERS|USE_VAD|CHANGE_NICKNAME|MANAGE_NICKNAMES|MANAGE_ROLES|MANAGE_WEBHOOKS|MANAGE_EMOJIS_AND_STICKERS|USE_APPLICATION_COMMANDS|REQUEST_TO_SPEAK|MANAGE_EVENTS|MANAGE_THREADS|USE_PRIVATE_THREADS|CREATE_PRIVATE_THREADS|USE_EXTERNAL_STICKERS|SEND_MESSAGES_IN_THREADS|START_EMBEDDED_ACTIVITIES|MODERATE_MEMBER/gi, function (matched) { return dicoPermissions[matched]; });
 
             if (cmd.ownerOnly) {
                 if (interaction.user.id != ownerId) {
-                    return interaction.reply({ content: `**❌ Eh oh ${interaction.member}, y'a que mon développeur qui peut exécuter cette commande !**`, ephemeral: true, fetchReply: true })
+                    return interaction.reply({
+                        content: `**❌ Eh oh ${interaction.member}, y'a que mon développeur qui peut exécuter cette commande !**`,
+                        ephemeral: true,
+                        fetchReply: true
+                    })
                 }
             }
 
-            if (!interaction.member.permissions.has([cmd.permissions])) return interaction.reply({ content: `**❌ Eh oh ${interaction.member}, t'as pas les permissions pour exécuter cette commande !\n🪧 Permissions requises : 🙶 \`${permissionsList}\` 🙸**`, ephemeral: true, fetchReply: true })
+            if (!interaction.member.permissions.has([cmd.permissions])) {
+                return interaction.reply({
+                    content: `**❌ Eh oh ${interaction.member}, t'as pas les permissions pour exécuter cette commande !\n🪧 Permissions requises : 🙶 \`${permissionsList}\` 🙸**`,
+                    ephemeral: true,
+                    fetchReply: true
+                })
+            }
 
             cmd.runInteraction(client, interaction);
+        }
+        else if (interaction.isAutocomplete()) {
+            const cmd = client.commands.get(interaction.commandName);
+            if (!cmd) return;
+            cmd.runAutocomplete(client, interaction);
         }
         else if (interaction.isButton()) {
             const btn = client.buttons.get(interaction.customId);

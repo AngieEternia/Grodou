@@ -68,7 +68,7 @@ module.exports = {
             .setDescription(`Exclusion : ${target} (id : \`${target.id}\`)\nAuteur de l'exclusion : ${interaction.user}\nDurée de l'exclusion : \`${convertedDuration}\`\nMotif de l'exclusion : \`\`\`${reason}\`\`\``)
             .setTimestamp();
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${interaction.guild.id}`, async (err, req) => {
+        db.query(`SELECT * FROM logs WHERE type = 'modo' AND guildID = ${interaction.guild.id}`, async (err, req) => {
 
             if (req.length < 1) return;
             else {

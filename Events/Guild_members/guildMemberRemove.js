@@ -24,9 +24,6 @@ module.exports = {
         let isMemberBan = false;
         if (targetBan.id === member.id) isMemberBan = true;
 
-        let leaveGuild = `👋 L'utilisateur a quitté ${member.guild.name} !`
-        if (isMemberKick || isMemberBan) leaveGuild = `❌ L'utilisateur a été modéré et a été écarté du serveur !`;
-
         const embed = new EmbedBuilder()
             .setAuthor({
                 name: `${member.user.tag} (id : ${member.id})`,
@@ -37,10 +34,9 @@ module.exports = {
                 `◽️ **Nom d'utilisateur :** ${member}\n◽️ **Créé le :** <t:${parseInt(member.user.createdTimestamp / 1000)}:f> (<t:${parseInt(member.user.createdTimestamp / 1000)}:R>)\n◽️ **Rejoint le :** <t:${parseInt(member.joinedTimestamp / 1000)}:f> (<t:${parseInt(member.joinedTimestamp / 1000)}:R>)\n◽️ **Quitté le :** <t:${parseInt(Date.now() / 1000)}:f> (<t:${parseInt(Date.now() / 1000)}:R>)\n`
             )
             .setTimestamp()
-            .setFooter({ text: leaveGuild });
+            .setFooter({ text: `👋 L'utilisateur a quitté ${member.guild.name}` });
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${member.guild.id}`, async (err, req) => {
-
+        db.query(`SELECT * FROM logs WHERE type = 'members' AND guildID = ${member.guild.id}`, async (err, req) => {
             if (req.length < 1) return;
             else {
                 const logChannel = client.channels.cache.get(req[0].channelID);

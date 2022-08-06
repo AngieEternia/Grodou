@@ -2,7 +2,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 
 module.exports = {
     name: 'thread',
-    category: "Thread",
+    category: "Modération",
     permissions: ['MANAGE_THREADS'],
     ownerOnly: false,
     usage: 'thread [create|join|leave|add|remove|archive|unarchive|delete]',

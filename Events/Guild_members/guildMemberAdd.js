@@ -16,10 +16,9 @@ module.exports = {
                 `◽️ **Nom d'utilisateur :** ${member}\n◽️ **Créé le :** <t:${parseInt(member.user.createdTimestamp / 1000)}:f> (<t:${parseInt(member.user.createdTimestamp / 1000)}:R>)\n◽️ **Rejoint le :** <t:${parseInt(member.joinedTimestamp / 1000)}:f> (<t:${parseInt(member.joinedTimestamp / 1000)}:R>)`
             )
             .setTimestamp()
-            .setFooter({ text: `L'utilisateur a rejoint ${member.guild.name} !` });
+            .setFooter({ text: `👍 L'utilisateur a rejoint ${member.guild.name} !` });
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${member.guild.id}`, async (err, req) => {
-
+        db.query(`SELECT * FROM logs WHERE type = 'members' AND guildID = ${member.guild.id}`, async (err, req) => {
             if (req.length < 1) return;
             else {
                 const logChannel = client.channels.cache.get(req[0].channelID);
@@ -27,5 +26,18 @@ module.exports = {
             }
         })
 
+        db.query(`SELECT * FROM serveur WHERE guildID = ${member.guild.id}`, async (err, req) => {
+
+            if (req.length < 1) return;
+
+            if (req[0].raid === "on") {
+
+                try {
+                    await member.user.send(`Le serveur \`${member.guild.name}\` est en mode anti-raid : **les nouveaux utilisateurs ne peuvent pas le rejoindre pour le moment !**`)
+                } catch (err) { }
+
+                await member.kick("Mode anti-raid activé")
+            }
+        })
     }
 }

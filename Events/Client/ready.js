@@ -1,4 +1,5 @@
 const Logger = require(`../../Utils/Logger`);
+const packageJSON = require(`../../package.json`)
 const chalk = require("chalk");
 const dayjs = require("dayjs");
 
@@ -41,6 +42,9 @@ module.exports = {
             client.user.setPresence({ activities: [{ name: status, type: activity}], status: "offline" })
             index++;
         }, 10000)
+        
+        await client.application.fetch();
+        const discordJSVersion = packageJSON.dependencies["discord.js"].replace('^', 'discord.js (v')+')';
 
         Logger.client(` —  ${client.user.username} est prêt !`);
         console.log(`----------------------------------------------------\n`+
@@ -50,20 +54,26 @@ module.exports = {
 `██    ██ ██   ██ ██    ██ ██   ██ ██    ██ ██    ██ \n`+
 `██████   ██   ██  ██████  ██████   ██████   ██████  \n`+
 `----------------------------------------------------\n`+
-chalk.blue.bold(`■ ID : `) + client.application.id + '\n' +
-chalk.blue.bold(`■ Tags : `) + 'Grodou v14#0761\n' +
+chalk.blue.bold(`■ ID : `) + client.user.id + '\n' +
+chalk.blue.bold(`■ Tags : `) + client.user.tag + '\n' +
 chalk.blue.bold(`■ Crée le : `) + dayjs(client.application.createdTimestamp).format("le DD/MM/YYYY à HH:mm:ss") + '\n' +
-chalk.blue.bold(`■ Librairie : `) + 'discord.js (v13.6.0)\n' +
-chalk.blue.bold(`■ Author : `) + 'Angé#0709\n' +
-chalk.blue.bold(`■ Langage : `) + 'fr-FR\n' +
+chalk.blue.bold(`■ NodeJS : `) + process.version +' \n' +
+chalk.blue.bold(`■ Librairie : `) + discordJSVersion +' \n' +
+chalk.blue.bold(`■ Author : `) + client.application.owner.tag + '\n' +
+chalk.blue.bold(`■ Langage : `) + packageJSON.language +' \n' +
 chalk.blue.bold(`■ Serveurs : `) + client.guilds.cache.size + '\n'+
 chalk.blue.bold(`■ Utilisateurs : `) + client.users.cache.size + '\n'+
 `----------------------------------------------------`)
 
-        const devGuild = await client.guilds.cache.get('968232923323064340');
+        // Slashcommands sur le serv de développement
+        //const devGuild = await client.guilds.cache.get('369070939763376138'); // test sur Eternia
+        const devGuild = await client.guilds.cache.get('968232923323064340'); // test sur GrodouEmotes1
         devGuild.commands.set(client.commands.map((cmd) => cmd));
 
+        //Pour avoir les commandes globales
         //client.application.commands.set(client.commands.map((cmd) => cmd));
-        //client.application.commands.set([])
+       
+        //Pour supprimer les commandes globales
+        client.application.commands.set([])
     }
 }

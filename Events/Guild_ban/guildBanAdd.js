@@ -26,7 +26,7 @@ module.exports = {
                 .setDescription(`◽️ **Banni :** ${ban.user} (id : \`${ban.user.id})\`\n◽️ **Auteur du bannissement :** ${executor})\n◽️ **Motif du bannissement :** \`\`\`${reason ? reason : "Aucun raison donnée"}\`\`\``)
                 .setTimestamp();
 
-            db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${ban.guild.id}`, async (err, req2) => {
+            db.query(`SELECT * FROM logs WHERE type = 'modo' AND guildID = ${ban.guild.id}`, async (err, req2) => {
                 if (req2.length < 1) return
                 else await client.channels.cache.get(req2[0].channelID).send({ embeds: [Embed] })
             })

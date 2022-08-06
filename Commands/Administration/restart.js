@@ -5,7 +5,7 @@ module.exports = {
     ownerOnly: true,
     usage: 'restart',
     examples: ['restart'],
-    description: "Permet de redémarrer Grodou",
+    description: "Je redémarre mon programme quand il y a besoin !",
     async runInteraction(client, interaction) {
         // const devGuild = await client.guilds.cache.get('968232923323064340');
         // devGuild.commands.set([]);

@@ -56,7 +56,7 @@ module.exports = {
             .setDescription(`◽️ **Expulsé :** ${target} (id : \`${target.id}\`)\n◽️ **Auteur de l'expulsion :** ${interaction.user}\n◽️ **Motif de l'expulsion :** \`\`\`${reason}\`\`\``)
             .setTimestamp();
 
-        db.query(`SELECT * FROM config WHERE type = 'logs' AND guildID = ${interaction.guild.id}`, async (err, req) => {
+        db.query(`SELECT * FROM logs WHERE type = 'modo' AND guildID = ${interaction.guild.id}`, async (err, req) => {
 
             if (req.length < 1) return;
             else {

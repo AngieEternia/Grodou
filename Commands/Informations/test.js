@@ -9,11 +9,13 @@ module.exports = {
     examples: ['test'],
     description: "Ceci est un test",
 
-    runInteraction(client, interaction) {
+    async runInteraction(client, interaction) {
         const embed = new EmbedBuilder()
             .setColor(client.color)
             .setDescription("ceci est un test")
 
-        interaction.reply({ embeds: [embed] })
+            await interaction.client.application.fetch();
+            console.log(client.application)
+        interaction.reply({ content:`${client.application.owner}` })
     }
 }
