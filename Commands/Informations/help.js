@@ -3,7 +3,7 @@ const listOfCategory = require(`../../Json/categories.json`)
 
 const contextDescription = {
     userinfo: "Je révèle toutes les infos à savoir sur un membre du serveur !",
-    avatar: "Je te montre en gros l'avatar d'un membre du serveur !"
+    avatar: "Je te montre l'avatar d'un membre du serveur en grand !"
 };
 
 module.exports = {

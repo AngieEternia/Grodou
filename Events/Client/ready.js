@@ -2,6 +2,7 @@ const Logger = require(`../../Utils/Logger`);
 const packageJSON = require(`../../package.json`)
 const chalk = require("chalk");
 const dayjs = require("dayjs");
+const { ActivityType } = require('discord.js');
 
 module.exports = {
     name: 'ready',
@@ -10,9 +11,9 @@ module.exports = {
 
         const arrayOfSatus = [
             `(っ◔◡◔)っ 🍎🍎🍎`,
-            `${client.guilds.cache.size} serveur${client.guilds.cache.size > 1 ? 's' : ''} !`,
+            `${client.guilds.cache.size} serveurs !`,
             `Évangie bizarrement...`,
-            `${client.users.cache.size} Eternien${client.users.cache.size > 1 ? 's' : ''} !`,
+            `${client.users.cache.size} Eterniens !`,
             `le temps qu'il fait !`,
             `/help si besoin est !`,
             `des 🍎 Parfaites *O*`,
@@ -20,28 +21,28 @@ module.exports = {
             `Mimiqui.. Bah il est où !?`,
             `Évangie qui chante faux`,
         ];
-    
+
         const arrayOfActivity = [
-            `PLAYING`,
-            `WATCHING`,
-            `WATCHING`,
-            `WATCHING`,
-            `WATCHING`,
-            `PLAYING`,
-            `WATCHING`,
-            `LISTENING`,
-            `WATCHING`,
-            `LISTENING`,
+            ActivityType.Playing,
+            ActivityType.Watching,
+            ActivityType.Watching,
+            ActivityType.Watching,
+            ActivityType.Watching,
+            ActivityType.Playing,
+            ActivityType.Watching,
+            ActivityType.Playing,
+            ActivityType.Listening,
+            ActivityType.Listening,
         ];
-    
+
         let index = 0;
         setInterval(() => {
             if (index === arrayOfSatus.length) index = 0;
             const status = arrayOfSatus[index];
             const activity = arrayOfActivity[index];
-            client.user.setPresence({ activities: [{ name: status, type: activity}], status: "offline" })
+            client.user.setPresence({ activities: [{ name: status, type: activity }], status: "iddle" });
             index++;
-        }, 10000)
+        }, 10000);
         
         await client.application.fetch();
         const discordJSVersion = packageJSON.dependencies["discord.js"].replace('^', 'discord.js (v')+')';

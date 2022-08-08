@@ -105,7 +105,7 @@ module.exports = {
                         await threadAuthor.members.add(interaction.user.id);
                         await threadAuthor.send({ content: `Hey ! Voici le premier message que tu as voulu envoyer dans ton thread :\`\`\`${threadMess}\`\`\`` })
 
-                        await interaction.reply({ content: `C'est tout bon ${interaction.user}, le thread \`${threadName}\` a bien été créé !`, ephemeral: true })
+                        await interaction.reply({ content: `C'est tout bon ${interaction.user}, le fil de discussion \`${threadName}\` a bien été créé !`, ephemeral: true })
                     } else {
                         interaction.reply(`Désolé mon bro, mais cette commande ne peut pas être exécutée ici : il faut qu'on soit dans un salon textuel !`)
                     }

@@ -1,6 +1,4 @@
-const { ApplicationCommandOptionType } = require('discord.js');
-
-const { EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'poll',
@@ -9,7 +7,7 @@ module.exports = {
     ownerOnly: false,
     usage: 'poll [question] [choix1|choix2|choix3...]',
     examples: ['poll [Thème du prochain Kahoot ?] [Principaux|Animé|Manga]'],
-    description: "Permet de poster son propre sondage !",
+    description: "Je t'aide à créer ton propre sondage !",
     options: [
         {
             name: 'question',

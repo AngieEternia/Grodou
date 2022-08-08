@@ -13,7 +13,7 @@ module.exports = {
             name: 'salon',
             description: 'Le salon à verrouiller',
             type: ApplicationCommandOptionType.Channel,
-            channelTypes: 0,
+            channelTypes: [0],
             required: false
         },
         {

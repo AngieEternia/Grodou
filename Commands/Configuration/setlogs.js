@@ -5,9 +5,9 @@ module.exports = {
     category: "Configuration",
     permissions: ['MANAGE_GUILD'],
     ownerOnly: false,
-    usage: 'setlogs [members|moderation|other] [add|remove]',
-    examples: ['setlogs join', 'setlogs leave'],
-    description: "Je te montre comment gérer les threads !",
+    usage: 'setlogs [membres|modération|autres] [add|remove] <channel>',
+    examples: ['setlogs membres add #nomDuSalon', 'setlogs autres remove'],
+    description: "J'enregistre dans ma mémoire l'endroit pour les logs du serveur !",
     options: [
         {
             name: 'membres',
@@ -34,7 +34,7 @@ module.exports = {
                     name: 'salon',
                     description: 'Le salon pour afficher les logs des arrivées et départs',
                     type: ApplicationCommandOptionType.Channel,
-                    channelTypes: 0,
+                    channelTypes: [0],
                     required: false
                 }
             ]
@@ -64,7 +64,7 @@ module.exports = {
                     name: 'salon',
                     description: 'Le salon pour afficher les logs des actes de modération',
                     type: ApplicationCommandOptionType.Channel,
-                    channelTypes: 0,
+                    channelTypes: [0],
                     required: false
                 }
             ]
@@ -94,7 +94,7 @@ module.exports = {
                     name: 'salon',
                     description: 'Le salon pour afficher les autres types de logs',
                     type: ApplicationCommandOptionType.Channel,
-                    channelTypes: 0,
+                    channelTypes: [0],
                     required: false
                 }
             ]
@@ -122,8 +122,8 @@ module.exports = {
 
         //////////////////////////////// MEMBRES ////////////////////////////////
         if (interaction.options.getSubcommand() === 'membres') {
-            if (evtChoices == 'add') {
-                db.query(`SELECT * FROM logs WHERE type = "members" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+            db.query(`SELECT * FROM logs WHERE type = "members" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                if (evtChoices == 'add') {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         sucessEmbed.addFields(
@@ -132,7 +132,7 @@ module.exports = {
                                 value: `J'ai bien **enregistré** ${channelTarget} dans ma base de données ! **Les logs concernant les membres** s'afficheront là-bas désormais !`
                             }
                         )
-                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('members', '${interaction.guild.id}', '${channelTarget.id}')`
+                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('members', '${interaction.guild.id}', '${channelTarget.id}')`;
                         db.query(sql, function (err) {
                             if (err) throw err;
                         })
@@ -161,10 +161,8 @@ module.exports = {
                         db.query(`UPDATE logs SET channelID = '${channelTarget.id}' WHERE type = "members" AND guildID = ${interaction.guild.id}`)
                         await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
-            else {
-                db.query(`SELECT * FROM logs WHERE type = "members" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                }
+                else {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         let thumbnail = new AttachmentBuilder(`./Img/emotes/grodou2.png`, { name: `grodou.png` })
@@ -175,7 +173,6 @@ module.exports = {
                                 value: `Je peux t'affirmer qu'**aucun salon n'est enregistré** dans ma base de données pour **les logs des membres** ! De ce fait, impossible d'accéder à ta requête !`
                             }
                         )
-
                         await interaction.reply({ embeds: [errorEmbed], files: [thumbnail] })
                     }
                     // Si un salon est déjà enregistré
@@ -187,18 +184,18 @@ module.exports = {
                             }
                         )
                         let sql = `DELETE FROM logs WHERE type = 'members' AND guildID = ${interaction.guild.id}`
-                        db.query(sql, function(err) {
-                            if(err) throw err;
+                        db.query(sql, function (err) {
+                            if (err) throw err;
                         })
-                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess]})
+                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
+                }
+            })
         }
         //////////////////////////////// MODÉRATION ////////////////////////////////
         else if (interaction.options.getSubcommand() === 'modération') {
-            if (evtChoices == 'add') {
-                db.query(`SELECT * FROM logs WHERE type = "modo" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+            db.query(`SELECT * FROM logs WHERE type = "modo" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                if (evtChoices == 'add') {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         sucessEmbed.addFields(
@@ -207,7 +204,7 @@ module.exports = {
                                 value: `J'ai bien **enregistré** ${channelTarget} dans ma base de données ! **Les logs concernant les actes de modération** s'afficheront là-bas désormais !`
                             }
                         )
-                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('modo', '${interaction.guild.id}', '${channelTarget.id}')`
+                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('modo', '${interaction.guild.id}', '${channelTarget.id}')`;
                         db.query(sql, function (err) {
                             if (err) throw err;
                         })
@@ -236,10 +233,8 @@ module.exports = {
                         db.query(`UPDATE logs SET channelID = '${channelTarget.id}' WHERE type = "modo" AND guildID = ${interaction.guild.id}`)
                         await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
-            else {
-                db.query(`SELECT * FROM logs WHERE type = "modo" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                }
+                else {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         let thumbnail = new AttachmentBuilder(`./Img/emotes/grodou2.png`, { name: `grodou.png` })
@@ -261,19 +256,19 @@ module.exports = {
                                 value: `J'ai bien **supprimé** le salon où **les logs des actes de modération** s'affichaient de ma base de données ! Ils ne s'y afficheront plus !`
                             }
                         )
-                        let sql = `DELETE FROM logs WHERE type = 'members' AND guildID = ${interaction.guild.id}`
-                        db.query(sql, function(err) {
-                            if(err) throw err;
+                        let sql = `DELETE FROM logs WHERE type = 'modo' AND guildID = ${interaction.guild.id}`
+                        db.query(sql, function (err) {
+                            if (err) throw err;
                         })
-                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess]})
+                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
+                }
+            })
         }
         //////////////////////////////// MODÉRATION ////////////////////////////////
         else if (interaction.options.getSubcommand() === 'autres') {
-            if (evtChoices == 'add') {
-                db.query(`SELECT * FROM logs WHERE type = "other" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+            db.query(`SELECT * FROM logs WHERE type = "other" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                if (evtChoices == 'add') {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         sucessEmbed.addFields(
@@ -282,7 +277,7 @@ module.exports = {
                                 value: `J'ai bien **enregistré** ${channelTarget} dans ma base de données ! **Les logs hors membres et modération** s'afficheront là-bas désormais !`
                             }
                         )
-                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('other', '${interaction.guild.id}', '${channelTarget.id}')`
+                        let sql = `INSERT INTO logs (type, guildID, channelID) VALUES ('other', '${interaction.guild.id}', '${channelTarget.id}')`;
                         db.query(sql, function (err) {
                             if (err) throw err;
                         })
@@ -311,10 +306,8 @@ module.exports = {
                         db.query(`UPDATE logs SET channelID = '${channelTarget.id}' WHERE type = "other" AND guildID = ${interaction.guild.id}`)
                         await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
-            else {
-                db.query(`SELECT * FROM logs WHERE type = "other" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+                }
+                else {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
                         let thumbnail = new AttachmentBuilder(`./Img/emotes/grodou2.png`, { name: `grodou.png` })
@@ -336,14 +329,14 @@ module.exports = {
                                 value: `J'ai bien **supprimé** le salon où **les logs hors membres et modération** s'affichaient de ma base de données ! Ils ne s'y afficheront plus !`
                             }
                         )
-                        let sql = `DELETE FROM logs WHERE type = 'members' AND guildID = ${interaction.guild.id}`
-                        db.query(sql, function(err) {
-                            if(err) throw err;
+                        let sql = `DELETE FROM logs WHERE type = 'other' AND guildID = ${interaction.guild.id}`
+                        db.query(sql, function (err) {
+                            if (err) throw err;
                         })
-                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess]})
+                        await interaction.reply({ embeds: [sucessEmbed], files: [thumbnailSucess] })
                     }
-                })
-            }
+                }
+            })
         }
     }
 }

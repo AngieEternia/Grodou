@@ -1,4 +1,4 @@
-const { ApplicationCommandType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandType, EmbedBuilder, ActivityType } = require('discord.js')
 const ms = require(`ms`)
 
 module.exports = {
@@ -14,18 +14,18 @@ module.exports = {
 
         //Dictionnaire pour les badges
         const dicoBadges = {
-            DISCORD_PARTNER: "<:discord_partner:977665915208470528>",
-            HYPESQUAD_EVENTS: "<:d_hypesquad_event:977665915091038211>",
-            HOUSE_BRILLIANCE: "<:d_house_brilliance:977665915296567326>",
-            HOUSE_BRAVERY: "<:d_house_bravery:977665915275608124>",
-            HOUSE_BALANCE: "<:d_house_balance:977665915372068914>",
-            BUGHUNTER_LEVEL_1: "<:d_bughunter_level_1:977665915174920222>",
-            BUGHUNTER_LEVEL_2: "<:d_bughunter_level_2:977665915162333274>",
-            EARLY_SUPPORTER: "<:d_early_supporter:977665915376250990>",
-            VERIFIED_DEVELOPER: "<:d_early_verified_developer:977665915367850137>",
-            EARLY_VERIFIED_DEVELOPER: "<:d_early_verified_developer:977665915367850137>",
-            STAFF: "<:d_staff:977665915636310066>",
-            MODERATOR: "<:d_moderator:977665915405623376>"
+            Partner: "<:discord_partner:977665915208470528>",
+            Hypesquad: "<:d_hypesquad_event:977665915091038211>",
+            HypeSquadOnlineHouse2: "<:d_house_brilliance:977665915296567326>",
+            HypeSquadOnlineHouse1: "<:d_house_bravery:977665915275608124>",
+            HypeSquadOnlineHouse3: "<:d_house_balance:977665915372068914>",
+            BugHunterLevel1: "<:d_bughunter_level_1:977665915174920222>",
+            BugHunterLevel2: "<:d_bughunter_level_2:977665915162333274>",
+            PremiumEarlySupporter: "<:d_early_supporter:977665915376250990>",
+            VerifiedDeveloper: "<:d_early_verified_developer:977665915367850137>",
+            VerifiedDeveloper: "<:d_early_verified_developer:977665915367850137>",
+            Staff: "<:d_staff:977665915636310066>",
+            CertifiedModerator: "<:d_moderator:977665915405623376>"
         }
 
         //Dictionnaire pour les statuts 
@@ -53,7 +53,7 @@ module.exports = {
         let activity // pour récupérer le member.presence.activities et vérifier les conditions
         let userActivity // récap de la forme "verbe + activité"
         let customStatus // pour le statut personnalisé
-        let mapActivity = { PLAYING: "Joue à", STREAMING: "Streame", LISTENING: "Écoute", WATCHING: "Regarde", COMPETING: "Participe à", CUSTOM: "" } // mini dico pour traduire les activités
+        let mapActivity = { 0: "Joue à", 1: "Streame", 2: "Écoute", 3: "Regarde", 5: "Participe à", CUSTOM: "" } // mini dico pour traduire les activités
         let connexionUser = "" // pour la plateforme de connexion de user
         let dicoPlateforme = { web: "Web", mobile: "Mobile", desktop: "Ordinateur" } // mini dico pour traduire
         if (status !== "offline") { // si le membre est en ligne...
@@ -73,7 +73,7 @@ module.exports = {
                     customStatus = "Aucun"
                 }
             }
-            userActivity = userActivity.replace(/PLAYING|STREAMING|LISTENING|WATCHING|COMPETING/gi, function (matched) { return mapActivity[matched]; }); // on formate...
+            userActivity = userActivity.replace(/0|1|2|3|5/gi, function (matched) { return mapActivity[matched]; }); // on formate...
             // pour la plateforme de connexion
             let typeConnexion = Object.keys(member.presence.clientStatus);
             for (let i = 0; i < (typeConnexion.length); i++) {
@@ -92,6 +92,7 @@ module.exports = {
             .setAuthor({ name: `${member.user.tag} (${member.id})`, iconURL: member.user.bot ? 'https://cdn.discordapp.com/emojis/1002260214642384906.png' : 'https://cdn.discordapp.com/emojis/1002260213434421288.png' })
             .setColor(client.color)
             .setThumbnail(member.user.displayAvatarURL())
+            .setImage(await (await client.users.fetch(member.user.id, {force: true})).bannerURL({dynamic: true, size: 4096}))
             .addFields([
                 {
                     name: `<:sep1:975384221138948126>  Informations sur l'utilisateur  <:sep3:975384220849557545>`,
@@ -113,7 +114,7 @@ module.exports = {
                         `> ◽️ **Surnom** : \`${member.nickname ? member.nickname : "Aucun surnom"}\``,
                         `> ◽️ **Nombre de rôles** : \`${member.roles.cache.size - 1} rôle${member.roles.cache.size - 1 > 1 ? "s" : ""}\``,
                         `> ◽️ **Rôle le plus haut :** ${member.roles.highest}`,
-                        `> ◽️ **Modérateur :** ${member.kickable ? '🔴' : '🟢'}`,
+                        `> ◽️ **Modérateur :** ${member.kickable ? '<:invalide:979484974443028480>' : '<:valide:982699120378642483>'}`,
                         `> ◽️ **Arrivée sur ${member.guild.name}** : \`il y a ${dayJoined}\` (<t:${Math.floor(member.joinedAt / 1000)}:D>)`,
                         ``,
                         ``,
@@ -121,7 +122,6 @@ module.exports = {
                     ].join("\n")
                 }
             ])
-
         interaction.reply({ embeds: [embed] })
     }
 }

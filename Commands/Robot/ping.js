@@ -2,7 +2,7 @@ const { EmbedBuilder, AttachmentBuilder } = require('discord.js')
 
 module.exports = {
     name: 'ping',
-    category: "Informations",
+    category: "Robot",
     permissions: ['SEND_MESSAGES'],
     ownerOnly: false,
     usage: 'ping',
@@ -16,7 +16,7 @@ module.exports = {
             const tryPong = await interaction.reply({ content: `Bouge pas mon Psykokwak, je calcule ça...`, fetchReply: true })
             const thumbnail = new AttachmentBuilder(`./Img/smiles/grodouWut.png`, { name: `miniature.png` });
             const embed = new EmbedBuilder()
-                .setTitle('<:grodoueyes:897582796434985031>  Résultats pour les différents tests de latence de...')
+                .setAuthor({ name: 'Résultats pour les différents tests de latence de...', iconURL: 'https://cdn.discordapp.com/emojis/897582796434985031.png' })
                 .setColor(client.color)
                 .setDescription(`Hello ! Ma dernière mise en ligne date d'<t:${parseInt(client.readyTimestamp / 1000)}:R> !`)
                 .setThumbnail(`attachment://${thumbnail.name}`)

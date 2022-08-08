@@ -13,51 +13,45 @@
              "emoji":"🔨"
        },
        {
-             "name":"Système",
-             "description":"Commandes pour gérer Grodou (développeur)",
-             "position":"3",
-             "emoji":"🔧"
-       },
-       {
              "name":"Configuration",
              "description":"Commandes permettant de configurer Grodou",
-             "position":"4",
+             "position":"3",
              "emoji":"⚙️"
        },
        {
              "name":"Robot",
              "description":"Informations par rapport à Grodou",
-             "position":"5",
+             "position":"4",
              "emoji":"🤖"
        },
        {
              "name":"Informations",
              "description":"Commandes permettant d'obtenir des informations",
-             "position":"6",
+             "position":"5",
              "emoji":"ℹ️"
        },
        {
              "name":"Utilisateurs",
              "description":"Commandes sur un utilisateur",
-             "position":"7",
+             "position":"6",
              "emoji":"🧐"
        },
        {
              "name":"Expérience",
              "description":"Système de niveaux évolutifs",
-             "position":"8",
+             "position":"7",
              "emoji":"🏅"
        },
        {
              "name":"Économie",
              "description":"Système d'économie personnalisé",
-             "position":"9",
+             "position":"8",
              "emoji":"💰"
        },
        {
              "name":"Pokémon",
              "description":"Commandes en rapport avec l'univers Pokémon",
-             "position":"10",
+             "position":"9",
              "emoji":"🎮"
        }
     ]
