@@ -21,7 +21,7 @@ let btn = new ActionRowBuilder()
 module.exports = {
     name: 'emojis',
     category: "Informations",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'emojis',
     examples: ['emojis'],

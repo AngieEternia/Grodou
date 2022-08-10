@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'lock',
     category: "Modération",
-    permissions: ['MANAGE_CHANNELS'],
+    permissions: ['ManageChannels'],
     ownerOnly: false,
     usage: 'lock <#channel> <reason>',
     examples: ['lock #nomDuSalon ceci_est_une_raison'],

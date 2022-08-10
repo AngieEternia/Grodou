@@ -3,7 +3,7 @@ const { EmbedBuilder } = require('discord.js')
 module.exports = {
     name: 'serverlist',
     category: "Robot",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'serverlist',
     examples: ['serverlist'],

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = requir
 module.exports = {
     name: 'setwelcome',
     category: "Configuration",
-    permissions: ['MANAGE_GUILD'],
+    permissions: ['ManageGuild'],
     ownerOnly: false,
     usage: 'setwelcome [add|remove] <channel>',
     examples: ['setwelcome add #nomDuSalon', 'setwelcome remove'],

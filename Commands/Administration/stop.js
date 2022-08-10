@@ -1,7 +1,7 @@
 module.exports = {
     name: 'stop',
     category: "Administration",
-    permissions: ['ADMINISTRATOR'],
+    permissions: ['Administrator'],
     ownerOnly: true,
     usage: 'stop',
     examples: ['stop'],

@@ -4,7 +4,7 @@ const Logger = require(`./Utils/Logger`);
 const Database = require(`./Utils/Database`)
 
 const client = new Client({
-    intents: 34439, //3276799 = tout
+    intents: 3276799,
     partials: [
         Partials.Message,
         Partials.Channel,
@@ -19,12 +19,13 @@ const client = new Client({
     (x) => (client[x] = new Collection())
 );
 
-["EventUtil", "CommandUtil", "ButtonUtil"/*, "SelectUtil"*/].forEach((handler) => {
+["EventUtil", "CommandUtil", "ButtonUtil", "SelectUtil"].forEach((handler) => {
     require(`./Utils/Handlers/${handler}`)(client);
 });
 
 client.db = Database;
 client.color = "#ed70a4";
+client.snipe = new Map()
 client.embedFootIcon = "https://eternia.fr/public/media/grodoubot/grodouRunLeft.gif";
 client.embedFooter = "Grodou, le Big Boss";
 client.function = {

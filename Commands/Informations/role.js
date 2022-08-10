@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 module.exports = {
     name: 'role',
     category: "Informations",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'role [#role]',
     examples: ['role', 'role #nomDuRole'],

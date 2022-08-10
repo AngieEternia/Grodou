@@ -3,7 +3,7 @@ const { EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, Button
 module.exports = {
     name: 'invite',
     category: "Robot",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'invite',
     examples: ['invite'],

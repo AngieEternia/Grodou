@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 module.exports = {
     name: 'unmute',
     category: "Modération",
-    permissions: ['MODERATE_MEMBERS'],
+    permissions: ['ModerateMembers'],
     ownerOnly: false,
     usage: 'unmute [@member] <raison>',
     examples: ['unmute @Utilisateur', 'unmute @Utilisateur ceci_est_une_raison'],

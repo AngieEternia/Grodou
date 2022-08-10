@@ -30,8 +30,8 @@ module.exports = {
             ActivityType.Watching,
             ActivityType.Playing,
             ActivityType.Watching,
-            ActivityType.Playing,
             ActivityType.Listening,
+            ActivityType.Watching,
             ActivityType.Listening,
         ];
 

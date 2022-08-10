@@ -3,7 +3,7 @@ const { EmbedBuilder } = require("discord.js")
 module.exports = {
     name: 'cheh',
     category: "Informations",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'cheh',
     examples: ['cheh'],

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 module.exports = {
     name: 'softban',
     category: "Modération",
-    permissions: ['BAN_MEMBERS'],
+    permissions: ['BanMembers'],
     ownerOnly: false,
     usage: 'softban [@member] [duration] <raison>',
     examples: ['softban @Utilisateur 4', 'softban @Utilisateur 4 ceci_est_une_raison'],

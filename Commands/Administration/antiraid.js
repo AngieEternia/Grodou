@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'antiraid',
     category: "Administration",
-    permissions: ['ADMINISTRATOR'],
+    permissions: ['Administrator'],
     ownerOnly: false,
     usage: 'antiraid [choix]',
     examples: ['antiraid on', 'antiraid off'],

@@ -4,7 +4,7 @@ const ms = require(`ms`)
 module.exports = {
     name: 'avatar',
     category: "Utilisateurs",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],

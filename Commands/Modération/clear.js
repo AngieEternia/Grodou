@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'clear',
     category: "Modération",
-    permissions: ['MANAGE_MESSAGES'],
+    permissions: ['ManageMessages'],
     ownerOnly: false,
     usage: 'clear [number] <@user> <#channel>',
     examples: ['clear 50', 'clear 50 @Utilisateur', 'clear 50 #nomDuSalon'],

@@ -4,25 +4,23 @@ module.exports = {
     name: 'messageCreate',
     once: false,
     execute(client, message) {
-        if (message.author.bot) return;
-
-        //On ne veut pas que Grodou pète un câble et se réponde à lui-même en boucle...
         const db = client.db;
 
+        if (message.author.bot) return; //On ne veut pas que Grodou pète un câble et se réponde à lui-même en boucle...
 
         db.query(`SELECT * FROM serveur WHERE guildID = ${message.guild.id}`, async (err, reqServ) => {
             // Enregistrement du serveur
-            if (reqServ.length < 1) {
-                let sql = `INSERT INTO serveur (guildID, prefix, troll, purcent_troll, raid) VALUES (${message.guild.id}, '${prefix}', 'off', '20', 'off')`
-                db.query(sql, function (err) {
-                    if (err) throw err;
-                })
-                return message.reply(`Deux secondes coco, j'enregistre le serveur dans ma base de données !`)
-            }
+            // if (reqServ.length < 1) {
+            //     let sql = `INSERT INTO serveur (guildID, prefix, troll, purcent_troll, raid) VALUES (${message.guild.id}, '${prefix}', 'off', '20', 'off')`
+            //     db.query(sql, function (err) {
+            //         if (err) throw err;
+            //     })
+            //     return message.reply(`Deux secondes coco, j'enregistre le serveur dans ma base de données !`)
+            // }
 
             // Insertion des données dans la table user de la base de données
             db.query(`SELECT * FROM user WHERE userID = ${message.author.id} AND guildID = ${message.guild.id}`, async (err, req) => {
-                
+
                 // S'il n'y a pas de ligne pour l'utilisateur
                 if (req.length < 1) {
 

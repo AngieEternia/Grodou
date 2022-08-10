@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 module.exports = {
     name: 'poll',
     category: "Informations",
-    permissions: ['MANAGE_MESSAGES'],
+    permissions: ['ManageMessages'],
     ownerOnly: false,
     usage: 'poll [question] [choix1|choix2|choix3...]',
     examples: ['poll [Thème du prochain Kahoot ?] [Principaux|Animé|Manga]'],

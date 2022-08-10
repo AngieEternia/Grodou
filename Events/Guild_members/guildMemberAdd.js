@@ -28,6 +28,18 @@ module.exports = {
             }
         })
 
+        // On vérifie si l'user a été kick après une troisième avertissement
+        db.query(`SELECT * FROM warns WHERE guildID = '${member.guild.id}' AND userID = ${member.id}`, async (err, req) => {
+            if (req.length < 1) return;
+            else {
+                db.query(`SELECT * FROM serveur WHERE guildID = '${member.guild.id}'`, async (err, warnReq) => {
+                    if (warnReq.length < 1) return;
+                    role = member.guild.roles.cache.find(role => role.name === '⛔ Avertissement');
+                    member.roles.add(role.id);
+                })
+            }
+        })
+
         // Mode anti-raid
         db.query(`SELECT * FROM serveur WHERE guildID = ${member.guild.id}`, async (err, req) => {
 

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'emit',
     category: "Administration",
-    permissions: ['ADMINISTRATOR'],
+    permissions: ['Administrator'],
     ownerOnly: true,
     usage: 'emit [eventName]',
     examples: ['emit', 'emit guildMemberAdd'],

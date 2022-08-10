@@ -4,7 +4,7 @@ const Canvas = require(`canvas`)
 module.exports = {
     name: 'rank',
     category: "Expérience",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'rank <@member>',
     examples: ['rank', 'rank @utilisateur'],

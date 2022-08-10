@@ -3,7 +3,7 @@ const { EmbedBuilder, AttachmentBuilder } = require('discord.js')
 module.exports = {
     name: 'ping',
     category: "Robot",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'ping',
     examples: ['ping'],

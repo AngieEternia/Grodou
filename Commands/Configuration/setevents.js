@@ -4,7 +4,7 @@ const interactionCreate = require('../../Events/Client/interactionCreate');
 module.exports = {
     name: 'setevents',
     category: "Configuration",
-    permissions: ['MANAGE_GUILD'],
+    permissions: ['ManageGuild'],
     ownerOnly: false,
     usage: 'setevents [configuration|probabilités|activation] [[add|remove]/[number]/[on|off]] <channel>',
     examples: ['setevents configuration add #nomDuSalon', 'setevents probabilités 50', 'setevents activation off'],

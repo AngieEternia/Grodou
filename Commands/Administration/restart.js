@@ -1,7 +1,7 @@
 module.exports = {
     name: 'restart',
     category: "Administration",
-    permissions: ['ADMINISTRATOR'],
+    permissions: ['Administrator'],
     ownerOnly: true,
     usage: 'restart',
     examples: ['restart'],

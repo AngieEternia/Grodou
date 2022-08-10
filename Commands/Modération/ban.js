@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 module.exports = {
     name: 'ban',
     category: "Modération",
-    permissions: ['BAN_MEMBERS'],
+    permissions: ['BanMembers'],
     ownerOnly: false,
     usage: 'ban [@member] <raison>',
     examples: ['ban @Utilisateur', 'ban @Utilisateur ceci_est_une_raison'],

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = requir
 module.exports = {
     name: 'setvoice',
     category: "Configuration",
-    permissions: ['MANAGE_GUILD'],
+    permissions: ['ManageGuild'],
     ownerOnly: false,
     usage: 'setvoice [add|remove] <channel>',
     examples: ['setvoice add #nomDuSalon', 'setvoice remove'],

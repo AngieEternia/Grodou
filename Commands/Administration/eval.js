@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 module.exports = {
     name: 'eval',
     category: "Administration",
-    permissions: ['ADMINISTRATOR'],
+    permissions: ['Administrator'],
     ownerOnly: false,
     usage: 'eval [code]',
     examples: ['eval Discord.Permissions.FLAGS'],

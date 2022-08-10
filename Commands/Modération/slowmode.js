@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType } = require('discord.js');
 module.exports = {
     name: 'slowmode',
     category: "Modération",
-    permissions: ['MANAGE_MESSAGES'],
+    permissions: ['ManageMessages'],
     ownerOnly: false,
     usage: 'slowmode [number] <#channel> <reason>',
     examples: ['slowmode 15', 'clear 15 #nomDuSalon', 'clear 15 #nomDuSalon ceci_est_une_raison'],

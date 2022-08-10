@@ -1,11 +1,10 @@
 const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
-const Canvas = require(`canvas`);
-const interactionCreate = require("../../Events/Client/interactionCreate");
+const os = require('os');
 
 module.exports = {
     name: 'test',
     category: "Informations",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'test',
     examples: ['test'],
@@ -13,36 +12,23 @@ module.exports = {
     options: [
         {
             name: 'utilisateur',
-            description: 'Le salon pour afficher les images d\'arrivée ou de départ',
+            description: 'Le membre à avertir',
             type: ApplicationCommandOptionType.User,
-            channelTypes: [2],
             required: true
         }
     ],
 
     async runInteraction(client, interaction) {
-        let Target = interaction.options.getMember('utilisateur');
-        const member = await interaction.guild.members.fetch(Target)
-        let status;
-        member.presence ? status = member.presence.status : status = "offline"
-        
-        let embed = new EmbedBuilder()
-        .addFields({
-            name: "Informations générales",
-            value: `
+        //console.log(process.version, os.arch(), os.cpus(), os.cpus().length, os.version(), os.type(), os.freemem())
 
-            **•** \`Nom\`**:** *${Target.user.username}*.
-            **•** \`ID\`**:** *${Target.user.id}*.
-            **•** \`Tag\`**:** *${Target.user.tag}*.
-            **•** \`Discriminateur\`**:** *${Target.user.discriminator}*.
-            **•** \`Statut\`**:** *${status}*.
-            **•** \`Rôle\`**:** *${Target.roles.size > 0 ? Target.roles.map(role => role.name).join(", ") : "Aucun"}*.
-            **•** \`Compte créé le\`**:** *${Target.user.createdAt.toLocaleString()}*.
-            **•** \`Dernière connexion\`**:** *${member.user.lastMessage.createdAt.toLocaleString()}*.
-            **•** \`Dernier message\`**:** *${member.user.lastMessage.content}*.
-            `
-          })
+        const db = client.db;
 
-          await interaction.reply({ embeds: [embed] });
+        const target = interaction.options.getMember('utilisateur');
+
+        db.query(`SELECT * FROM warns WHERE guildID = '${interaction.guild.id}' AND userID = ${target.id}`, async (err, req) => {
+            console.log(req.length);
+        })
+
+
     }
 }

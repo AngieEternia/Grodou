@@ -4,7 +4,7 @@ const ms = require('ms');
 module.exports = {
     name: 'mute',
     category: "Modération",
-    permissions: ['MODERATE_MEMBERS'],
+    permissions: ['ModerateMembers'],
     ownerOnly: false,
     usage: 'mute [@member] [duration] <raison>',
     examples: ['mute @Utilisateur 4h', 'mute @Utilisateur 4hour ceci_est_une_raison'],
@@ -39,6 +39,8 @@ module.exports = {
         let reason = interaction.options.getString('raison');
         if (!reason) reason = "Aucune raison donnée";
         let convertedDuration = ms(ms(duration), { long: true })
+        let mapObj = { second: "seconde", minute: "minute", hour: "heure", day: "jour" } // mini dico pour traduire ms()
+        convertedDuration = convertedDuration.replace(/second|minute|hour|day/gi, function (matched) { return mapObj[matched]; });
 
         if (!target.moderatable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être exclue... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
         if (!convertedTime) return interaction.reply({ content: `❌ Woups ! Il faut spécifier une durée valable ! <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
@@ -56,8 +58,6 @@ module.exports = {
             if (err) throw err;
         })
 
-        let mapObj = { second: "seconde", minute: "minute", hour: "heure", day: "jour" } // mini dico pour traduire ms()
-        convertedDuration = convertedDuration.replace(/second|minute|hour|day/gi, function (matched) { return mapObj[matched]; });
         let Embed = new EmbedBuilder()
             .setColor("#ffe400")
             .setAuthor({

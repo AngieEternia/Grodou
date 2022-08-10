@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
 module.exports = {
     name: 'kick',
     category: "Modération",
-    permissions: ['KICK_MEMBERS'],
+    permissions: ['KickMembers'],
     ownerOnly: false,
     usage: 'kick [@member] <raison>',
     examples: ['kick @Utilisateur', 'kick @Utilisateur ceci_est_une_raison'],

@@ -3,7 +3,7 @@ const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = requir
 module.exports = {
     name: 'setlogs',
     category: "Configuration",
-    permissions: ['MANAGE_GUILD'],
+    permissions: ['ManageGuild'],
     ownerOnly: false,
     usage: 'setlogs [membres|modération|autres] [add|remove] <channel>',
     examples: ['setlogs membres add #nomDuSalon', 'setlogs autres remove'],

@@ -5,7 +5,7 @@ const interactionCreate = require("../../Events/Client/interactionCreate");
 module.exports = {
     name: 'config',
     category: "Configuration",
-    permissions: ['MANAGE_GUILD'],
+    permissions: ['ManageGuild'],
     ownerOnly: false,
     usage: 'config',
     examples: ['config'],

@@ -4,7 +4,7 @@ const ms = require(`ms`)
 module.exports = {
     name: 'userinfo',
     category: "Utilisateurs",
-    permissions: ['SEND_MESSAGES'],
+    permissions: ['SendMessages'],
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],
@@ -39,7 +39,7 @@ module.exports = {
 
         //Statut de l'utilisateur
         let status;
-        member ? (member.presence ? status = member.presence.status : status = "offline") : status = "offline";
+        member.presence ? status = member.presence.status : status = "offline"
 
         //On crée le nombre de jour depuis que le compte a été créé/le serveur rejoint
         let dayCreated = ms((new Date()).getTime() - (member.user.createdAt).getTime(), { long: true }) // compte créé depuis...
@@ -115,10 +115,7 @@ module.exports = {
                         `> ◽️ **Nombre de rôles** : \`${member.roles.cache.size - 1} rôle${member.roles.cache.size - 1 > 1 ? "s" : ""}\``,
                         `> ◽️ **Rôle le plus haut :** ${member.roles.highest}`,
                         `> ◽️ **Modérateur :** ${member.kickable ? '<:invalide:979484974443028480>' : '<:valide:982699120378642483>'}`,
-                        `> ◽️ **Arrivée sur ${member.guild.name}** : \`il y a ${dayJoined}\` (<t:${Math.floor(member.joinedAt / 1000)}:D>)`,
-                        ``,
-                        ``,
-                        ``,
+                        `> ◽️ **Arrivée sur ${member.guild.name}** : \`il y a ${dayJoined}\` (<t:${Math.floor(member.joinedAt / 1000)}:D>)`
                     ].join("\n")
                 }
             ])

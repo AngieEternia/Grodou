@@ -9,7 +9,7 @@ module.exports = {
         db.query(`SELECT * FROM serveur WHERE guildID = ${ban.guild.id}`, async (err, req) => {
 
             const AuditsLogs = await ban.guild.fetchAuditLogs({
-                type: 'MEMBER_BAN_ADD',
+                type: 22,
                 limit: 1
             })
 
