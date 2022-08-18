@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'slowmode',
     category: "Modération",
     permissions: ['ManageMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageMessages,
     ownerOnly: false,
     usage: 'slowmode [number] <#channel> <reason>',
     examples: ['slowmode 15', 'clear 15 #nomDuSalon', 'clear 15 #nomDuSalon ceci_est_une_raison'],
@@ -31,10 +32,8 @@ module.exports = {
     ],
     async runInteraction(client, interaction) {
         const value = interaction.options.getNumber("nombre");
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
 
         if (value == 0) {
             await channelTarget.setRateLimitPerUser(0);

@@ -1,7 +1,10 @@
+const { PermissionFlagsBits } = require('discord.js');
+
 module.exports = {
     name: 'stop',
     category: "Administration",
     permissions: ['Administrator'],
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     ownerOnly: true,
     usage: 'stop',
     examples: ['stop'],

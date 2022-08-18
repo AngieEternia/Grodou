@@ -14,7 +14,7 @@ module.exports = {
             })
 
             const LatestBan = AuditsLogs.entries.first();
-            const { executor, target, reason } = LatestBan;
+            const { executor, reason } = LatestBan;
 
             let Embed = new EmbedBuilder()
                 .setColor("#ff0000")

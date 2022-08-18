@@ -1,10 +1,10 @@
-const { AttachmentBuilder, EmbedBuilder } = require('discord.js');
-const Canvas = require(`canvas`)
+const { AttachmentBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'leaderboard',
     category: "Expérience",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'leaderboard',
     examples: ['leaderboard'],

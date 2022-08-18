@@ -1,7 +1,10 @@
+const { PermissionFlagsBits } = require('discord.js');
+
 module.exports = {
     name: 'restart',
     category: "Administration",
     permissions: ['Administrator'],
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     ownerOnly: true,
     usage: 'restart',
     examples: ['restart'],

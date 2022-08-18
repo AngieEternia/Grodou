@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'role',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'role [#role]',
     examples: ['role', 'role #nomDuRole'],
@@ -67,7 +68,6 @@ module.exports = {
         const embed = new EmbedBuilder()
             .setColor(client.color)
             .setAuthor({ name: `Petit topo sur le rôle ${role.name}`, iconURL: 'https://cdn.discordapp.com/emojis/897582796434985031.png' })
-            //.setDescription(`${channel.topic ? `**Sujet du salon :** ${channel.topic}` : `Détails sur le salon ${channel}, pour tout savoir de sa création jusqu'aux permissions`}`)
             .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
             .addFields(
                 {

@@ -1,0 +1,163 @@
+{
+    "liste": [
+        {
+            "truename": "Pokémon Écarlate et Violet",
+            "keywords": {
+                "━━━━ INFORMATION ━━━━": {
+                    "https://eternia.fr/fr/site/article/4375-pokemon-ecarlate-et-pokemon-violet/": [
+                        "accueil",
+                        "index"
+                    ],
+                    "https://eternia.fr/fr/site/article/4428-pokemon-ecarlate-et-pokemon-violet-events-et-distributions/": [
+                        "event",
+                        "events",
+                        "distribution",
+                        "distributions"
+                    ]
+                },
+                "━━━━ SOLUCE DU JEU ━━━━": {},
+                "━━━━ POKÉDEX ━━━━": {
+                    "https://eternia.fr/fr/site/article/4383-pokemon-ecarlate-et-pokemon-violet-etymologie-des-nouveaux-pokemon/": [
+                        "etymologie",
+                        "etymologies"
+                    ],
+                    "https://eternia.fr/fr/site/article/4384-pokemon-ecarlate-et-pokemon-violet-le-pokedex-regional/": [
+                        "pokedex regional",
+                        "pokedex",
+                        "dex"
+                    ],
+                    "https://eternia.fr/fr/site/article/4417-pokemon-ecarlate-et-pokemon-violet-les-nouveaux-petits-arrivants/": [
+                        "nouveau",
+                        "nouveaux",
+                        "newpoke",
+                        "newpokemon",
+                        "pokemon 9G"
+                    ]
+                },
+                "━━━━ POKÉMON ━━━━": {
+                    "https://eternia.fr/fr/site/article/4379-pokemon-ecarlate-et-pokemon-violet-les-starters/": [
+                        "starter",
+                        "starters"
+                    ],
+                    "https://eternia.fr/fr/site/article/4427-pokemon-ecarlate-et-pokemon-violet-les-pokemon-exclusifs/": [
+                        "exclusifs",
+                        "exclusif"
+                    ],
+                    "https://eternia.fr/fr/site/article/4424-pokemon-ecarlate-et-pokemon-violet-les-nouvelles-formes-de-paldea/": [
+                        "forme",
+                        "formes",
+                        "forme paldea",
+                        "formes paldea"
+                    ],
+                    "https://eternia.fr/fr/site/article/4432-pokemon-ecarlate-et-pokemon-violet-les-formes-de-kuraidon-et-miraidon/": [
+                        "formes legendaires",
+                        "forme miraidon",
+                        "forme koraidon",
+                        "formes miraidon koraidon"
+                    ]
+                },
+                "━━━━ LÉGENDAIRES ━━━━": {
+                    "https://eternia.fr/fr/site/article/4419-pokemon-ecarlate-et-pokemon-violet-koraidon-et-miraidon/": [
+                        "koraidon",
+                        "miraidon",
+                        "legendaire",
+                        "legendaires"
+                    ]
+                },
+                "━━━━ CHAMPIONS ━━━━": {
+                    "https://eternia.fr/fr/site/article/4429-pokemon-ecarlate-et-pokemon-violet-grusha-le-champion-de-type-glace/": [
+                        "grusha",
+                        "arene glace"
+                    ]
+                },
+                "━━━━ PERSONNAGES ━━━━": {
+                    "https://eternia.fr/fr/site/article/4380-pokemon-ecarlate-et-pokemon-violet-les-heros-de-laventure/": [
+                        "heros",
+                        "personnages",
+                        "personnage",
+                        "perso"
+                    ],
+                    "https://eternia.fr/fr/site/article/4420-pokemon-ecarlate-et-pokemon-violet-les-professeurs-olim-et-turum/": [
+                        "prof",
+                        "profs",
+                        "professeur",
+                        "professeure",
+                        "professeurs",
+                        "olim",
+                        "turum"
+                    ],
+                    "https://eternia.fr/fr/site/article/4421-pokemon-ecarlate-et-pokemon-violet-menzi-votre-amie-et-rivale/": [
+                        "menzi",
+                        "rival",
+                        "rivale",
+                        "ami",
+                        "amie"
+                    ],
+                    "https://eternia.fr/fr/site/article/4430-pokemon-ecarlate-et-pokemon-violet-les-personnages-de-lacademie/": [
+                        "clavel",
+                        "jacq",
+                        "pepper",
+                        "pania",
+                        "personnages academie"
+                    ]
+                },
+                "━━━━ LES LIEUX ━━━━": {},
+                "━━━━ FONCTIONNALITÉS ━━━━": {
+                    "https://eternia.fr/fr/site/article/4431-pokemon-ecarlate-et-pokemon-violet-la-teracristallisation/": [
+                        "teracristallisation"
+                    ],
+                    "https://eternia.fr/fr/site/article/4418-pokemon-ecarlate-et-pokemon-violet-le-poke-portail/": [
+                        "multijoueur",
+                        "multijoueurs",
+                        "pokeportail",
+                        "poke portail"
+                    ],
+                    "https://eternia.fr/fr/site/article/4433-pokemon-ecarlate-et-pokemon-violet-les-raids-teracristal/": [
+                        "raids",
+                        "raid",
+                        "raids teracristal",
+                        "raid teracristal"
+                    ]
+                },
+                "━━━━ RESSOURCES ━━━━": {
+                    "https://eternia.fr/fr/site/article/4385-pokemon-ecarlate-et-pokemon-violet-logos-et-boxarts/": [
+                        "logo",
+                        "logos",
+                        "boxart",
+                        "boxarts"
+                    ],
+                    "https://eternia.fr/fr/site/article/4377-pokemon-ecarlate-et-pokemon-violet-artworks-des-pokemon/": [
+                        "artwork pokemon",
+                        "artworks pokemon"
+                    ],
+                    "https://eternia.fr/fr/site/article/4378-pokemon-ecarlate-et-pokemon-violet-artworks-des-personnages/": [
+                        "artwork personnage",
+                        "artworks personnages"
+                    ],
+                    "https://eternia.fr/fr/site/article/4426-pokemon-ecarlate-et-pokemon-violet-autres-illustrations-officielles/": [
+                        "autre artwork",
+                        "autres artworks"
+                    ],
+                    "https://eternia.fr/fr/site/article/4376-pokemon-ecarlate-et-pokemon-violet-les-screenshots/": [
+                        "screen",
+                        "screens",
+                        "screenshot",
+                        "screenshots"
+                    ]
+                },
+                "━━━━ VIDÉOS ━━━━": {
+                    "https://eternia.fr/fr/site/article/4381-pokemon-ecarlate-et-pokemon-violet-trailers-officiels-francais/": [
+                        "trailer français",
+                        "trailers français",
+                        "video",
+                        "videos"
+                    ],
+                    "https://eternia.fr/fr/site/article/4382-pokemon-ecarlate-et-pokemon-violet-trailers-officiels-japonais/": [
+                        "trailer japonais",
+                        "trailers japonais"
+                    ]
+                }
+            }
+        }
+    ]
+}

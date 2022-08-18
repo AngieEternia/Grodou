@@ -1,9 +1,10 @@
-const { EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'invite',
     category: "Robot",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'invite',
     examples: ['invite'],

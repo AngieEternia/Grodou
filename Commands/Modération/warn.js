@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'warn',
     category: "Modération",
     permissions: ['ModerateMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.ModerateMembers,
     ownerOnly: false,
     usage: 'warn [@member] <raison>',
     examples: ['warn @Utilisateur', 'warn @Utilisateur ceci_est_une_raison'],
@@ -29,15 +30,13 @@ module.exports = {
         const ID = await client.function.createID("WARN");
 
         const target = interaction.options.getMember('utilisateur');
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
 
         if (!target.moderatable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être avertie... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
 
         // Aout du rôle "avertissement"
         db.query(`SELECT * FROM serveur WHERE guildID = '${interaction.guild.id}'`, async (err, req) => {
             if (req.length < 1) return;
-            console.log(req[0].warn_role)
             if (!target.roles.cache.find(r => r.id === req[0].warn_role)) {
                 await target.roles.add(req[0].warn_role, ['Avertissement reçu']);
             }
@@ -62,14 +61,13 @@ module.exports = {
             }
             // Si deuxième avertissement
             else if (req.length == 2) {
-                console.log(req.length);
                 const IDMute = await client.function.createID("MUTE");
                 if (target.isCommunicationDisabled()) return interaction.reply({ content: "❌ Bah euh non ? Cette personne est déjà muette !", ephemeral: true, fetchReply: true })
                 target.timeout(259200000, `Deuxième avertissement reçu (Parole retirée par ${interaction.user.tag})`); // 3 jours de mute
                 try {
                     await target.send(`<:grodouNO:520329945168347157> ! J'espère que t'es fier de toi ! T'as été rendu muet sur le serveur \`${interaction.guild.name}\` pendant \`3 jours\` à cause du deuxième avertissement que tu as reçu !`);
                 } catch (err) { }
-                await interaction.reply({ content: `**🚫 \`${target.displayName}\` a été averti et a été exclu par \`${interaction.user.tag}\` pendant \`3 jours\` avec succès <:grodouAH:520329433752797184> !\n🪧 Raison : 🙶 \`${reason} (deuxième avertissement)\` 🙸**`, fetchReply: true });
+                await interaction.reply({ content: `🚫 \`${target.displayName}\` a été averti et a été exclu par \`${interaction.user.tag}\` pendant \`3 jours\` avec succès <:grodouAH:520329433752797184> !\n🪧 Raison : 🙶 \`${reason} (deuxième avertissement)\` 🙸**`, fetchReply: true });
 
                 // Insertion du warn dans la base de données
                 let sql2 = `INSERT INTO mutes (userID, authorID, muteID, guildID, reason, date, time) VALUES (${target.id}, '${interaction.user.id}', '${IDMute}', '${interaction.guild.id}', 'Deuxième avertissement', '${Date.now()}', '3j')`
@@ -96,7 +94,6 @@ module.exports = {
             }
             // Si troisième avertissement
             else if (req.length == 3) {
-                console.log(req.length);
                 const IDKick = await client.function.createID("KICK");
                 target.kick(`Troisième avertissement reçu (Expulsé par ${interaction.user.tag})`); // 1 Kick
                 try {
@@ -130,7 +127,6 @@ module.exports = {
             }
             // Si quatrième et dernier avertissement
             else if (req.length == 4) {
-                console.log(req.length);
                 const IDBan = await client.function.createID("BAN");
                 target.ban({ reason: `Quatrième avertissement reçu (Banni par ${interaction.user.tag})` }); // 1 ban
                 try {

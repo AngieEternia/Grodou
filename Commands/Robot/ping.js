@@ -1,9 +1,10 @@
-const { EmbedBuilder, AttachmentBuilder } = require('discord.js')
+const { EmbedBuilder, AttachmentBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'ping',
     category: "Robot",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'ping',
     examples: ['ping'],

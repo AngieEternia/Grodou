@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'setvoice',
     category: "Configuration",
     permissions: ['ManageGuild'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
     ownerOnly: false,
     usage: 'setvoice [add|remove] <channel>',
     examples: ['setvoice add #nomDuSalon', 'setvoice remove'],
@@ -49,8 +50,7 @@ module.exports = {
             .setThumbnail(`attachment://${thumbnailSucess.name}`);
 
 
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
         const evtChoices = interaction.options.getString('choix');
 
         db.query(`SELECT * FROM setup WHERE type = "voice" AND guildID = ${interaction.guild.id} AND channelID = ${channelTarget.id}`, async (err, req) => {

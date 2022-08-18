@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'clear',
     category: "Modération",
     permissions: ['ManageMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageMessages,
     ownerOnly: false,
     usage: 'clear [number] <@user> <#channel>',
     examples: ['clear 50', 'clear 50 @Utilisateur', 'clear 50 #nomDuSalon'],

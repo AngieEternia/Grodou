@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'setwelcome',
     category: "Configuration",
     permissions: ['ManageGuild'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
     ownerOnly: false,
     usage: 'setwelcome [add|remove] <channel>',
     examples: ['setwelcome add #nomDuSalon', 'setwelcome remove'],
@@ -49,8 +50,7 @@ module.exports = {
             .setThumbnail(`attachment://${thumbnailSucess.name}`);
 
 
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
         const evtChoices = interaction.options.getString('choix');
 
         db.query(`SELECT * FROM setup WHERE type = "welcome" AND guildID = ${interaction.guild.id}`, async (err, req) => {

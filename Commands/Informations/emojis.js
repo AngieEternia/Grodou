@@ -1,4 +1,4 @@
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js")
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require("discord.js")
 
 let btn = new ActionRowBuilder()
     .addComponents(
@@ -22,6 +22,7 @@ module.exports = {
     name: 'emojis',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'emojis',
     examples: ['emojis'],
@@ -78,7 +79,7 @@ module.exports = {
                 // On crée un index pour savoir sur quelle page on se trouve
                 let indexPage = 0;
 
-                // On crée les boutons
+                // On crée le collector
                 let msg = await interaction.reply({ embeds: [emoteListEmbeds[indexPage]], components: [btn], fetchReply: true })
                 let filter = async () => true;
 
@@ -86,7 +87,7 @@ module.exports = {
 
                 collector.on("collect", async button => {
 
-                    if (button.user.id !== interaction.user.id) return button.reply({ content: "Bah non, tu ne peux pas faire ça, t'es pas l'auteur du message !", ephemeral: true })
+                    if (button.user.id !== interaction.user.id) return button.reply({ content: "Bah non, tu ne peux pas faire ça, t'es pas l'auteur du message !", ephemeral: true });
 
                     if (button.customId === "retour" && indexPage === 0) { // Pour boucler sur la page de fin
                         indexPage += (emoteListEmbeds.length - 1) // Ajoute 1 à l'index page

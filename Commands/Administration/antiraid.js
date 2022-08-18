@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'antiraid',
     category: "Administration",
     permissions: ['Administrator'],
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     ownerOnly: false,
     usage: 'antiraid [choix]',
     examples: ['antiraid on', 'antiraid off'],

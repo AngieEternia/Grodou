@@ -9,15 +9,6 @@ module.exports = {
         if (message.author.bot) return; //On ne veut pas que Grodou pète un câble et se réponde à lui-même en boucle...
 
         db.query(`SELECT * FROM serveur WHERE guildID = ${message.guild.id}`, async (err, reqServ) => {
-            // Enregistrement du serveur
-            // if (reqServ.length < 1) {
-            //     let sql = `INSERT INTO serveur (guildID, prefix, troll, purcent_troll, raid) VALUES (${message.guild.id}, '${prefix}', 'off', '20', 'off')`
-            //     db.query(sql, function (err) {
-            //         if (err) throw err;
-            //     })
-            //     return message.reply(`Deux secondes coco, j'enregistre le serveur dans ma base de données !`)
-            // }
-
             // Insertion des données dans la table user de la base de données
             db.query(`SELECT * FROM user WHERE userID = ${message.author.id} AND guildID = ${message.guild.id}`, async (err, req) => {
 
@@ -42,7 +33,7 @@ module.exports = {
                     ****************************************************/
                     if (!message.content.startsWith(prefix)) {
 
-                        let xp = Math.floor(Math.random() * 19) + 1;
+                        let xp = Math.floor(Math.random() * 20) + 1;
                         let need = (parseInt(req[0].level) + 1) * 1000;
 
                         db.query(`UPDATE user SET xp = '${parseInt(req[0].xp) + xp}' WHERE userID = ${message.author.id} AND guildID = ${message.guild.id}`)

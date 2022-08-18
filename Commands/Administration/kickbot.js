@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'kickbot',
     category: "Administration",
     permissions: ['Administrator'],
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     ownerOnly: true,
     usage: 'kickbot [guild_id]',
     examples: ['kickbot', 'kickbot id_du_serveur'],

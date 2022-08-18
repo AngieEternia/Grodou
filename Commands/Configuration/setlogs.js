@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'setlogs',
     category: "Configuration",
     permissions: ['ManageGuild'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
     ownerOnly: false,
     usage: 'setlogs [membres|modération|autres] [add|remove] <channel>',
     examples: ['setlogs membres add #nomDuSalon', 'setlogs autres remove'],
@@ -116,8 +117,7 @@ module.exports = {
             .setThumbnail(`attachment://${thumbnailSucess.name}`);
 
 
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
         const evtChoices = interaction.options.getString('choix');
 
         //////////////////////////////// MEMBRES ////////////////////////////////

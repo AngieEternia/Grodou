@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'softban',
     category: "Modération",
     permissions: ['BanMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.BanMembers,
     ownerOnly: false,
     usage: 'softban [@member] [duration] <raison>',
     examples: ['softban @Utilisateur 4', 'softban @Utilisateur 4 ceci_est_une_raison'],
@@ -36,8 +37,7 @@ module.exports = {
         const ID = await client.function.createID("TEMPBAN");
         const target = interaction.options.getMember('utilisateur');
         const duration = interaction.options.getNumber('durée');
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
 
         if (!target.bannable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être bannie, même temporairement... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
 

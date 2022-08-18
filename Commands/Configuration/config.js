@@ -1,11 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require("discord.js")
-const Canvas = require(`canvas`);
-const interactionCreate = require("../../Events/Client/interactionCreate");
+const { EmbedBuilder, PermissionFlagsBits } = require("discord.js")
 
 module.exports = {
     name: 'config',
     category: "Configuration",
     permissions: ['ManageGuild'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
     ownerOnly: false,
     usage: 'config',
     examples: ['config'],
@@ -94,7 +93,13 @@ module.exports = {
                                         .setColor(client.color)
                                         .setAuthor({ name: `Configuration de ${client.user.username}`, iconURL: 'https://cdn.discordapp.com/emojis/897582796434985031.png' })
                                         .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-                                        .setDescription(`Bienvenue sur ma commande de **configuration** !\n\n Je te dévoile ici les commandes qui t'aideront à correctement me paramétrer sur ton serveur.\n\nN'hésitez pas à consulter leurs détails avec \`/help\`.\n\nSois prudent... <:grodou3:903378318362017803>`)
+                                        .setDescription(
+                                            [
+                                                `Bienvenue sur ma commande de **configuration**!`,
+                                                `Je te dévoile ici les commandes qui t'aideront à correctement me paramétrer sur ton serveur.`,
+                                                `N'hésitez pas à consulter leurs détails avec \`/help\`.\n\nSois prudent... <:grodou3:903378318362017803>`
+                                            ].join('\n\n')
+                                        )
                                         .addFields(
                                             // {
                                             //     name: `<:sep1:975384221138948126> Commandes disponibles <:sep3:975384220849557545>`,

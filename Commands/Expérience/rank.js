@@ -1,10 +1,11 @@
-const { ApplicationCommandOptionType, AttachmentBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, AttachmentBuilder, PermissionFlagsBits } = require('discord.js');
 const Canvas = require(`canvas`)
 
 module.exports = {
     name: 'rank',
     category: "Expérience",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'rank <@member>',
     examples: ['rank', 'rank @utilisateur'],
@@ -22,7 +23,7 @@ module.exports = {
 
         let target = interaction.options.getMember('utilisateur');
         let user;
-        if (!target) {target = interaction.user; user = interaction.user} else user = target.user;
+        if (!target) { target = interaction.user; user = interaction.user } else user = target.user;
         let member = await interaction.guild.members.fetch(target);
 
         await interaction.reply({ content: `Bouge pas mon Psykokwak, je cherche ça dans mon bazar...`, fetchReply: true });
@@ -125,7 +126,7 @@ module.exports = {
                 ctx.arc(100, 100, 75, 0, Math.PI * 2, true);
                 ctx.closePath();
                 ctx.clip();
-                const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ extension: 'png'}));
+                const avatar = await Canvas.loadImage(member.user.displayAvatarURL({ extension: 'png' }));
                 ctx.drawImage(avatar, 25, 25, 150, 150);
                 ctx.restore(); // on restaure la zone de travail avant le cut
 

@@ -1,10 +1,10 @@
-const { EmbedBuilder } = require("discord.js")
-const interactionCreate = require("../../Events/Client/interactionCreate");
+const { EmbedBuilder, PermissionFlagsBits } = require("discord.js");
 
 module.exports = {
     name: 'server',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'server',
     examples: ['server'],

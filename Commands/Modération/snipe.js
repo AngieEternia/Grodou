@@ -1,9 +1,10 @@
-const { AttachmentBuilder, EmbedBuilder } = require('discord.js');
+const { AttachmentBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'snipe',
     category: "Modération",
     permissions: ['ManageMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageMessages,
     ownerOnly: false,
     usage: 'snipe',
     examples: ['snipe'],

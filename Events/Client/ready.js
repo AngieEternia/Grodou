@@ -67,9 +67,11 @@ chalk.blue.bold(`■ Utilisateurs : `) + client.users.cache.size + '\n'+
 `----------------------------------------------------`)
 
         // Slashcommands sur le serv de développement
-        //const devGuild = await client.guilds.cache.get('369070939763376138'); // test sur Eternia
-        const devGuild = await client.guilds.cache.get('968232923323064340'); // test sur GrodouEmotes1
-        devGuild.commands.set(client.commands.map((cmd) => cmd));
+        // const devGuild = await client.guilds.cache.get('369070939763376138'); // test sur Eternia
+        // devGuild.commands.set(client.commands.map((cmd) => cmd));
+
+        const devGuild2 = await client.guilds.cache.get('968232923323064340'); // test sur GrodouEmotes1
+        devGuild2.commands.set(client.commands.map((cmd) => cmd));
 
         //Pour avoir les commandes globales
         //client.application.commands.set(client.commands.map((cmd) => cmd));

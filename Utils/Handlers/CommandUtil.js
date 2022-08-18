@@ -5,7 +5,9 @@ const Logger = require(`../Logger`);
 const { ApplicationCommandType } = require('discord.js')
 
 module.exports = async client => {
-    (await pGlob(`${process.cwd()}/Commands/*/*.js`)).map(async cmdFile => {
+    const explore = await pGlob(`${process.cwd()}/Commands/*/*.js`);
+    console.log("----------------------------------------------------");
+    explore.map(async cmdFile => {
 
         const cmd = require(cmdFile);
 
@@ -16,6 +18,8 @@ module.exports = async client => {
         if (!cmd.category) return Logger.warn(`Commande non-chargée : merci d'indiquer une catégorie ↓\n➡️  Fichier : ${cmdFile}`);
 
         if (!cmd.permissions) return Logger.warn(`Commande non-chargée : merci d'indiquer des permissions ↓\n➡️  Fichier : ${cmdFile}`);
+
+        if (!cmd.defaultMemberPermissions) return Logger.warn(`Commande non-chargée : merci d'indiquer les permissions par défaut ↓\n➡️  Fichier : ${cmdFile}`);
 
         if (cmd.ownerOnly === undefined) return Logger.warn(`Commande non-chargée : merci d'indiquer si la commande est ownerOnly ↓\n➡️  Fichier : ${cmdFile}`);
 

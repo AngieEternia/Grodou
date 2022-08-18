@@ -1,5 +1,6 @@
+.gitignore
 .env
 package-lock.json
 node_modules/
 Img/
-.gitignore
+OldCommands/

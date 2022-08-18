@@ -1,10 +1,11 @@
-const { ApplicationCommandType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandType, EmbedBuilder, PermissionFlagsBits } = require('discord.js')
 const ms = require(`ms`)
 
 module.exports = {
     name: 'avatar',
     category: "Utilisateurs",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],

@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'kick',
     category: "Modération",
     permissions: ['KickMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.KickMembers,
     ownerOnly: false,
     usage: 'kick [@member] <raison>',
     examples: ['kick @Utilisateur', 'kick @Utilisateur ceci_est_une_raison'],
@@ -29,8 +30,7 @@ module.exports = {
         const ID = await client.function.createID("KICK");
 
         const target = interaction.options.getMember('utilisateur');
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
 
         if (!target.kickable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être expulsée... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
 

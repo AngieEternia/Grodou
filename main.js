@@ -4,7 +4,7 @@ const Logger = require(`./Utils/Logger`);
 const Database = require(`./Utils/Database`)
 
 const client = new Client({
-    intents: 3276799,
+    intents: /*3276799*/ 38791,
     partials: [
         Partials.Message,
         Partials.Channel,

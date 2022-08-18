@@ -1,10 +1,10 @@
-const { ApplicationCommandOptionType } = require("discord.js")
-const { EmbedBuilder } = require("discord.js")
+const { EmbedBuilder, PermissionFlagsBits } = require("discord.js")
 
 module.exports = {
     name: 'date',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'date',
     examples: ['date'],

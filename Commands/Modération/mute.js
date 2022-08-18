@@ -1,10 +1,11 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const ms = require('ms');
 
 module.exports = {
     name: 'mute',
     category: "Modération",
     permissions: ['ModerateMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.ModerateMembers,
     ownerOnly: false,
     usage: 'mute [@member] [duration] <raison>',
     examples: ['mute @Utilisateur 4h', 'mute @Utilisateur 4hour ceci_est_une_raison'],
@@ -36,8 +37,7 @@ module.exports = {
         const target = interaction.options.getMember('utilisateur');
         const duration = interaction.options.getString('durée');
         const convertedTime = ms(duration);
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
         let convertedDuration = ms(ms(duration), { long: true })
         let mapObj = { second: "seconde", minute: "minute", hour: "heure", day: "jour" } // mini dico pour traduire ms()
         convertedDuration = convertedDuration.replace(/second|minute|hour|day/gi, function (matched) { return mapObj[matched]; });

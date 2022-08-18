@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'poll',
     category: "Informations",
-    permissions: ['ManageMessages'],
+    permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'poll [question] [choix1|choix2|choix3...]',
     examples: ['poll [Thème du prochain Kahoot ?] [Principaux|Animé|Manga]'],

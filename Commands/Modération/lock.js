@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType } = require('discord.js');
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'lock',
     category: "Modération",
     permissions: ['ManageChannels'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageChannels,
     ownerOnly: false,
     usage: 'lock <#channel> <reason>',
     examples: ['lock #nomDuSalon ceci_est_une_raison'],
@@ -30,12 +31,9 @@ module.exports = {
         }
     ],
     async runInteraction(client, interaction) {
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
-        let role = interaction.options.getRole('role');
-        if (!role) role = interaction.guild;
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
+        let role = interaction.options.getRole('role') || interaction.guild;
 
         await channelTarget.permissionOverwrites.edit(role.id, { SendMessages: false });
 

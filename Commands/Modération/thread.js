@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'thread',
     category: "Modération",
     permissions: ['ManageThreads'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageThreads,
     ownerOnly: false,
     usage: 'thread [create|join|leave|add|remove|archive|unarchive|delete]',
     examples: ['thread join', 'thread leave'],

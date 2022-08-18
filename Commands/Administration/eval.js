@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'eval',
     category: "Administration",
     permissions: ['Administrator'],
+    defaultMemberPermissions: PermissionFlagsBits.Administrator,
     ownerOnly: false,
     usage: 'eval [code]',
     examples: ['eval Discord.Permissions.FLAGS'],

@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'channel',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'channel <#channel>',
     examples: ['channel', 'channel #nomDuSalon'],
@@ -17,8 +18,7 @@ module.exports = {
         }
     ],
     async runInteraction(client, interaction) {
-        let channel = interaction.options.getChannel('salon');
-        if (!channel) channel = interaction.channel;
+        let channel = interaction.options.getChannel('salon') || interaction.channel;
 
         //Dictionnaires en vrac...
         const dicoTypes = {

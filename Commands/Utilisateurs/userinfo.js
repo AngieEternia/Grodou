@@ -1,10 +1,11 @@
-const { ApplicationCommandType, EmbedBuilder, ActivityType } = require('discord.js')
+const { ApplicationCommandType, EmbedBuilder, PermissionFlagsBits } = require('discord.js')
 const ms = require(`ms`)
 
 module.exports = {
     name: 'userinfo',
     category: "Utilisateurs",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'Utiliser le menu contextuel de Discord',
     examples: ['Clic-droit sur un utilisateur'],
@@ -92,7 +93,7 @@ module.exports = {
             .setAuthor({ name: `${member.user.tag} (${member.id})`, iconURL: member.user.bot ? 'https://cdn.discordapp.com/emojis/1002260214642384906.png' : 'https://cdn.discordapp.com/emojis/1002260213434421288.png' })
             .setColor(client.color)
             .setThumbnail(member.user.displayAvatarURL())
-            .setImage(await (await client.users.fetch(member.user.id, {force: true})).bannerURL({dynamic: true, size: 4096}))
+            .setImage(await (await client.users.fetch(member.user.id, { force: true })).bannerURL({ dynamic: true, size: 4096 }))
             .addFields([
                 {
                     name: `<:sep1:975384221138948126>  Informations sur l'utilisateur  <:sep3:975384220849557545>`,

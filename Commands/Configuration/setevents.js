@@ -1,10 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder } = require('discord.js');
-const interactionCreate = require('../../Events/Client/interactionCreate');
+const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'setevents',
     category: "Configuration",
     permissions: ['ManageGuild'],
+    defaultMemberPermissions: PermissionFlagsBits.ManageGuild,
     ownerOnly: false,
     usage: 'setevents [configuration|probabilités|activation] [[add|remove]/[number]/[on|off]] <channel>',
     examples: ['setevents configuration add #nomDuSalon', 'setevents probabilités 50', 'setevents activation off'],
@@ -95,8 +95,7 @@ module.exports = {
             .setThumbnail(`attachment://${thumbnailSucess.name}`);
 
 
-        let channelTarget = interaction.options.getChannel('salon');
-        if (!channelTarget) channelTarget = interaction.channel;
+        let channelTarget = interaction.options.getChannel('salon') || interaction.channel;
         const evtChoices = interaction.options.getString('choix');
         const purcent = interaction.options.getNumber('pourcentage');
 

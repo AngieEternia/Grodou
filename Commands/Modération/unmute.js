@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
     name: 'unmute',
     category: "Modération",
     permissions: ['ModerateMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.ModerateMembers,
     ownerOnly: false,
     usage: 'unmute [@member] <raison>',
     examples: ['unmute @Utilisateur', 'unmute @Utilisateur ceci_est_une_raison'],
@@ -27,8 +28,7 @@ module.exports = {
         const db = client.db;
         const ID = await client.function.createID("MUTE");
         const target = interaction.options.getMember('utilisateur');
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
 
         if (!target.isCommunicationDisabled()) return interaction.reply({ content: "❌ Bah euh non ? Cette personne a déjà la parole !", ephemeral: true, fetchReply: true })
 

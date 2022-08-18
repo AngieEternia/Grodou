@@ -4,7 +4,9 @@ const pGlob = promisify(glob)
 const Logger = require(`../Logger`);
 
 module.exports = async client => {
-    (await pGlob(`${process.cwd()}/Events/*/*.js`)).map(async eventFile => {
+    const explore = await pGlob(`${process.cwd()}/Events/*/*.js`);
+    console.log("----------------------------------------------------");
+    explore.map(async eventFile => {
         const event = require(eventFile)
 
         if (!event.name) return Logger.warn(`Évènement non-déclenché : merci d'indiquer un nom ↓\n➡️  Fichier : ${eventFile}`);

@@ -1,4 +1,4 @@
-const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, SelectMenuBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, SelectMenuBuilder, PermissionFlagsBits } = require('discord.js')
 const listOfCategory = require(`../../Json/categories.json`)
 
 const contextDescription = {
@@ -10,6 +10,7 @@ module.exports = {
     name: 'help',
     category: "Informations",
     permissions: ['SendMessages'],
+    defaultMemberPermissions: PermissionFlagsBits.SendMessages,
     ownerOnly: false,
     usage: 'help <command>',
     examples: ['help', 'help ping'],

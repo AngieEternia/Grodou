@@ -1,9 +1,10 @@
-const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js')
+const { ApplicationCommandOptionType, PermissionFlagsBits } = require('discord.js')
 
 module.exports = {
     name: 'ban',
     category: "Modération",
     permissions: ['BanMembers'],
+    defaultMemberPermissions: PermissionFlagsBits.BanMembers,
     ownerOnly: false,
     usage: 'ban [@member] <raison>',
     examples: ['ban @Utilisateur', 'ban @Utilisateur ceci_est_une_raison'],
@@ -23,12 +24,10 @@ module.exports = {
         }
     ],
     async runInteraction(client, interaction) {
-
         const db = client.db;
         const ID = await client.function.createID("BAN");
         const target = interaction.options.getMember('utilisateur');
-        let reason = interaction.options.getString('raison');
-        if (!reason) reason = "Aucune raison donnée";
+        let reason = interaction.options.getString('raison') || "Aucune raison donnée";
 
         if (!target.bannable) return interaction.reply({ content: `❌ Non, non, non ! Cette personne a un totem d'immunité, elle ne peut pas être bannie... <:grodou2:903378318668222575>`, ephemeral: true, fetchReply: true });
 
