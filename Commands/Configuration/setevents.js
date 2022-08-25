@@ -101,7 +101,7 @@ module.exports = {
 
         //////////////////////////////// CONDIFUGRATION /////////////////////////
         if (interaction.options.getSubcommand() === 'configuration') {
-            db.query(`SELECT * FROM setup WHERE type = "troll" AND guildID = ${interaction.guild.id}`, async (err, req) => {
+            db.query(`SELECT * FROM setup WHERE type = "troll" AND guildID = ${interaction.guild.id} AND channelID = ${channelTarget.id}`, async (err, req) => {
                 if (evtChoices == 'add') {
                     // S'il n'y a aucun salon enregistré
                     if (req.length < 1) {
@@ -151,7 +151,7 @@ module.exports = {
                                 value: `J'ai bien **supprimé** ${channelTarget} de ma base de données ! Je n'y ferai plus aucune intervention !`
                             }
                         )
-                        let sql = `DELETE FROM setup WHERE type = 'troll' AND guildID = ${interaction.guild.id} AND channelID = ${channelTarget.id}`
+                        let sql = `DELETE FROM setup WHERE type = 'troll' AND guildID = ${interaction.guild.id} AND channelID = '${channelTarget.id}'`
                         db.query(sql, function (err) {
                             if (err) throw err;
                         })
@@ -186,7 +186,7 @@ module.exports = {
                         thumbnailSucess = new AttachmentBuilder(`./Img/emotes/grodou3.png`, { name: `grodou.png` });
                         sucessEmbed.addFields(
                             {
-                                name: `Oh, salut ${interaction.user} !`,
+                                name: `Oh, salut ${interaction.user.username} !`,
                                 value: `Merci de m'avoir réveillé ! Je m'en vais dire plein de bêtises maintenant ! Quand ? Eh bien, ça, c'est un secret...!`
                             }
                         )
@@ -199,7 +199,7 @@ module.exports = {
                         errorEmbed.setThumbnail(`attachment://${thumbnail.name}`);
                         errorEmbed.addFields(
                             {
-                                name: `Eh, oh, ${interaction.displayName}, va falloir se calmer !`,
+                                name: `Eh, oh, ${interaction.user.username}, va falloir se calmer !`,
                                 value: `Au cas où tu ne le saurais pas, j'ai déjà bu trois cafés, je suis réveilé depuis un p'tit moment déjà !`
                             }
                         )
@@ -213,7 +213,7 @@ module.exports = {
                         thumbnailSucess = new AttachmentBuilder(`./Img/emotes/grodou8.png`, { name: `grodou.png` });
                         sucessEmbed.addFields(
                             {
-                                name: `Bon, bah, d'accord ${interaction.displayName}...`,
+                                name: `Bon, bah, d'accord ${interaction.user.username}...`,
                                 value: `J'ai compris le message... J'arrête de dire des bêtises, je vais me coucher... <:grodou9:903378318039068786>`
                             }
                         )

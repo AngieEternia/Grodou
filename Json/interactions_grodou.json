@@ -1,90 +1,64 @@
 {
-    "comment1": "Définit ici le préfix à utiliser globalement.",
-    "prefix": "g!",
-    "comment2": "Définit ici l'ensemble des salutations possibles de Grodou.",
-    "bonjour": [
-        "Hello there <:grodou2:715507273728000001>",
-        "Salut la compagnie !",
-        "Bien le bonjour <:grodou1:715507273706897418>",
-        "Oush oush <:grotrigger:697176055936712715>"
-    ],
-    "comment3": "Les réponses randoms quand on se plante dans la commande !",
-    "BadCommande": [
-        "Bah, t'essaye de faire quoi là ? Je n'ai pas encore appris cette capacité ! <:grodou2:715507273728000001>",
-        "Euh je ne sais pas ce que tu essayes de faire, mais je ne sais pas faire ça <:grodou6:715507273623142462>",
-        "La commande que vous avez demandée n'est plus attribuée. Veuillez réessayer ultérieurement. <:grodou3:715507273623142461>",
-        "Bien tenté, mais même avec un *Action Replay*, je ne peux pas faire ça. <:grodou2:715507273728000001>",
-        "Et la marmotte, elle met le chocolat dans le papier d'alu aussi ? <:grodou3:715507273623142461>",
-        "J'peux pas faire ça, arrête ! <:grodouNO:520329945168347157>",
-        "Et ta sœur, elle bat le beurre ?? <:grodouNO:520329945168347157>",
-        "<:n:899680329525235842> <:o:899680329542021152> <:p:899680331924406352> <:e:899680329370054706>   <:grodouNO:520329945168347157>"
-    ],
-    "comment4": "Définit ici les mots qui irritent Grodou...",
+    "1===============================================================": "================================================================",
     "forbiddenWords": [
-        "tg","Tg", "TG", "TAGGLE", "taggle", "Taggle", "TA GUEULE", "ta gueule", "Ta gueule", "tais toi", "tais-toi", "la ferme"
+        "tg", "taggle", "ta gueule", "tais toi", "tais-toi", "la ferme", "pute", "putain", "fdp"
     ],
-    "comment5": "... et ses possibles réponses.",
     "repInsultes": [
-        "<:grodou4:715507273434398784>",
-        "<:grodou8:715507273484468226>",
-        "<:grodou7:715507273954492436>",
+        "<:grodou4:903378318458503238>",
+        "<:grodou8:903378318441734164>",
+        "<:grodou7:903378955623616543>",
         "Non.",
-        "Mais pourquoi tu m'insultes ? <:grodou5:715507273803235359>"
+        "Mais pourquoi tu m'insultes ? <:grodou5:903378318013894669>",
+        "On t'a jamais dit de mieux causer !? <:grodou10:903378318299111427>",
+        "Toi-même, le gueux ! <:grodou2:903378318668222575>",
+        "OH ! C'EST QUOI CE LANGAGE ?! CONTINUE ET T'ES PRIVÉ DE POMMES PARFAITES !! <:grodou2:903378318668222575>"
     ],
-    "comment6": "Définit ici les interrogations profondes de Grodou...",
+    "2===============================================================": "================================================================",
     "repHorny": [
         "Ca veut dire quoi « horny » <:grodou3:715507273623142461> ?",
-        "<@!547112029350264833>... <:omagad:618129001361309716>",
-        "Wesh ça commence à gratter un peu... OH NON JE PARLE COMME VOLCAPUTE <:grodou2:715507273728000001>",
-        "Mais je suis pas horny, ça va pas bien !? <:grodou2:715507273728000001>",
-        "Chi po horny mi lo",
+        "Wesh ça commence à gratter un peu... OH NON, JE PARLE COMME VOLCAROBOT <:grodou2:903378318668222575>",
+        "Mais je suis pas horny, ça va pas bien !? <:grodou2:903378318668222575>",
         "Vous savez ce qu'on dit ? Sortez couvert !"
     ],
-    "comment7": "Là, ça se complique un peu parce que Grodou a plein de façons de réagir aux pommes...",
-    "petites_pommes": [
-        "pomme",
-        "Pomme"
-    ],
-    "petites_rep": [
+    "3===============================================================": "================================================================",
+    "text_pommes": ["pomme", "pommes"],
+    "text_pommes_rep": [
         "Des pommes !? Où ça des pommes ??!! <:grodou6:715507273623142462>",
         "Mangez des pommes !",
         "Oh ouiiii, vive les pommes, j'adore ça <:grodou1:715507273706897418>",
         "Tu aimes les pommes ? Continue.",
         "J'espère que t'es pas allergique aux pommes ! <:grodouNO:520329945168347157>",
         "Hier j'ai mangé une pomme.\n\n\n\n\n\n\n\n\n<:grodou3:715507273623142461>",
-        "Touche pas à mes pommes toi ! <:grodou2:715507273728000001>"
-    ],
-    "grosses_pommes": [
-        "POMMES",
-        "POMME"
-    ],
-    "grosses_rep": [
-        "ON NE BOUGE PLUS, CECI EST UNE PRISE DE POMMES <:grodou2:715507273728000001>",
-        "DONNE-MOI CES POMMES TOUT DE SUITE <:grodou8:715507273484468226>",
-        "EH OH, MOI AUSSI JE PEUX CRIER POUR DES POMMES D'ABORD <:grodou2:715507273728000001>",
+        "Touche pas à mes pommes toi ! <:grodou2:903378318668222575>",
+        "ON NE BOUGE PLUS, CECI EST UNE PRISE DE POMMES <:grodou2:903378318668222575>",
+        "DONNE-MOI CES POMMES TOUT DE SUITE <:grodou8:903378318441734164>",
+        "EH OH, MOI AUSSI JE PEUX CRIER POUR DES POMMES D'ABORD <:grodou2:903378318668222575>",
         "P-P-A-P",
-        "https://youtu.be/NfuiB52K7X8?t=6",
-        "ARRÊTE DE CRIER J'SUIS PAS SOURD ! <:grodouNO:520329945168347157>"
+        "https://youtu.be/NfuiB52K7X8?t=6"
     ],
+    "5===============================================================": "================================================================",
     "emoji_pomme": [
         "🍎"
     ],
-    "emoji_rep": [
+    "emoji_pomme_rep": [
         "🍎🍎🍎<:groAH1:585558960719790206><:groAH2:523441414307315723><:groAH1:585558960719790206>🍎🍎🍎",
         "Owiiii viens ! On fait une tarte aux pommes !",
         "Tu sais ce qu'on dit ? Faut manger au moins 5 Pommes par jours. Quoi ? C'est pas ça ?! <:grodou6:715507273623142462>",
-        "J'espère pour toi que c'est des Pommes Parfaites, sinon... <:grotrigger:697176055936712715>"
+        "J'espère pour toi que c'est des Pommes Parfaites, sinon... <:grotrigger:903378319171538984>"
     ],
     "emoji_pomme_verte": [
         "🍏"
     ],
     "emoji_rep_verte": [
-        "Beurk, c'est pas une Pomme Parfaite ça 🤢"
+        "Beurk, c'est pas une Pomme Parfaite ça 🤢",
+        "C'est quoi ça !? Je veux une vraie pomme, moi ! <:grodou2:903378318668222575>",
+        "Écoute, coco. Si les *Granny Smith* c'est ton délire, c'est ton problème. Pas le mien."
     ],
+    "6===============================================================": "================================================================",
     "trolls": [
         "https://tenor.com/view/issou-gif-6142112",
-        "Je ne crois pas non <:grodou5:715507273803235359>",
-        "<:grodou2:715507273728000001>",
+        "Je ne crois pas non <:grodou5:903378318013894669>",
+        "<:grodou2:903378318668222575>",
         "<:grodou3:715507273623142461>",
         "<a:lmao:940980851037044806>",
         "C'est cela oui... <:grodou3:715507273623142461>",
@@ -101,8 +75,8 @@
         "Dis-moi pas qu'c'est pas vrai !? <:grodou6:715507273623142462>",
         "Je sais pas vous, mais j'ai une grosse envie de ping quelqu'un ici pour rien, juste comme ça <:grodou3:715507273623142461>",
         "Oui oui oui, c'est très intéressant ce que tu dis mais... Ouais, non, tout bien réfléchis, ça m'intéresse pas <:grodou3:715507273623142461>",
-        "L'autre jour, Évangie m'a dit que j'étais insupportable, t'y crois toi !? <:grodou8:715507273484468226>",
-        "💤💤💤 <:grodou9:903378318039068786>... Oh pardon, je me suis endormi en te lisant <:grodou8:715507273484468226>",
+        "L'autre jour, Évangie m'a dit que j'étais insupportable, t'y crois toi !? <:grodou8:903378318441734164>",
+        "💤💤💤 <:grodou9:903378318039068786>... Oh pardon, je me suis endormi en te lisant <:grodou8:903378318441734164>",
         "<a:lmao:940980851037044806><a:lmao:940980851037044806><a:lmao:940980851037044806><:arrete:898640048348614696>",
         "Meurs, pourriture communiste !",
         "Je suis le pape et j'attends ma sœur.",
@@ -169,10 +143,11 @@
         "On va faire une rixe au Courtepaille.",
         "Y’a moyen d’écrire correctement ?"
     ],
+    "7===============================================================": "================================================================",
     "replies": [
         "Oui ? C'est pour quoi ? <:grodou3:715507273623142461>",
         "Qui le demande ?",
-        "Bah, pourquoi tu me ping comme ça, hein ? <:grodou7:715507273954492436>",
+        "Bah, pourquoi tu me ping comme ça, hein ? <:grodou7:903378955623616543>",
         "MAIS ARRÊTE DE ME PING POUR RIEN !!!",
         "Ok. Je quitte Eternia.",
         "J'ai pas le temps frangin, je dois buter Évangie... <:groAH2:523441414307315723>",
@@ -181,10 +156,7 @@
         "<:groAH1:585558960719790206><:groAH2:523441414307315723><:groAH1:585558960719790206>",
         "🍎🍎🍎🍎🍎✨"
     ],
-    "message_id_autorole": "898934719377444875",
-    "message_id_autorole_twitter": "906125008148004894",
-    "message_id_autorole_activitéStaff": "920760228025348187",
-    "comment8": "Petite ref à StarWars...",
+    "8===============================================================": "================================================================",
     "hellothere": [
         "Hello there", "HELLO THERE", "hello there"
     ],
@@ -192,44 +164,30 @@
         "Général Kenobi",
         "<:sabre_rouge:901151051422511195><:grodou3:715507273623142461><:sabre_vert:901151051774824509>"
     ],
-    "quoi": [
-        "Quoi", "quoi", "QUOI"
-    ],
-    "coiffeur": [
-        "**FEUR**"
-    ],
+    "9===============================================================": "================================================================",
     "Belgique" : [
         "Belgique", "BELGIQUE", "belgique", "belgik", "BELGIK", "Belgik", "Belle Gique", "belle gique", "BELLE GIQUE", "frite", "FRITE", "Frite"
     ],
+    "10==============================================================": "================================================================",
     "Cadre" : [
         "Cadre", "CADRE", "cadre", "kadre", "KADRE", "Kadre", "Kdr", "KDR", "kdr"
     ],
+    "11==============================================================": "================================================================",
     "Vivant" : [
         "vivant", "VIVANT", "Vivant", "Vivants", "VIVANTS", "Vivants"
     ],
-    "comment9" : "La partie sur Halloween",
-    "questionWeen" : [
-        ""
-    ],
-    "pseudoHalloween" :[
-        "Scream Queen",
-        "Hannibal Lecter",
-        "Jigsaw",
-        "Ça",
-        "Dracula",
-        "Freddy Krueger",
-        "Chucky"
-    ],
-    "gifBonbons" :[
-        "https://tenor.com/view/despicable-me-agnes-candies-candy-sweets-gif-3447236",
-        "https://tenor.com/view/mr-bean-rowan-atkinson-bean-bean-movie-working-title-films-gif-15034599",
-        "https://tenor.com/view/halloween-candy-halloween-candy-candies-happy-halloween-gif-18733280",
-        "https://tenor.com/view/candy-sweet-candies-delicious-yummy-gif-5769440",
-        "https://tenor.com/view/candy-sour-gummi-worms-chocolate-junk-food-sweet-tooth-gif-6903322",
-        "https://tenor.com/view/candy-sweets-chocolate-chocolate-bar-pralinen-gif-20357261",
-        "https://tenor.com/view/sasha-spilberg-candies-gif-5951444",
-        "https://tenor.com/view/jelly-bean-candy-candies-gif-3971594",
-        "https://tenor.com/view/one-tree-hill-halloween-candy-halloween-treats-candies-gif-22865570",
-        "https://tenor.com/view/gifmop-wisch-mop-cute-building-gif-13231527"
+    "12==============================================================": "================================================================",
+    "jpp": ["jpp", "j p p"],
+    "jpp_rep": [
+        "« JPP » ? J'adore parler péruvien ? <:grodou1:903378318387191818>",
+        "« JPP » ? J'aime pas les poires ? <:grodou2:903378318668222575>",
+        "« JPP » ? Jean Pierre Pernaut ? <:grodou3:903378318362017803>",
+        "« JPP » ? J'ai perdu puta*n ? <:grodou4:903378318458503238>",
+        "« JPP » ? J'aime plus Pokémon ? <:grodou5:903378318013894669>",
+        "« JPP » ? J'ai même pas peur ? <:grodou6:903378318563352646>",
+        "« JPP » ? J'aime Pat Patrouille ? <:grodou7:903378955623616543>",
+        "« JPP » ? J'ai plus de pommes ? <:grodou8:903378318441734164>",
+        "« JPP » ? J'ai plus la pêche ? <:grodou9:903378318039068786>",
+        "« JPP » ? J'aime la Pizza au Pepperoni ? <:grodou10:903378318299111427>"
     ]
 }

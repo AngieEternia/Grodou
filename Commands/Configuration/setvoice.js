@@ -63,7 +63,7 @@ module.exports = {
                             value: `J'ai bien **enregistré** ${channelTarget} dans ma base de données ! En cliquant dessus, **des canaux vocaux temporaires** pourront être créés dans la même catégorie par les membres !`
                         }
                     )
-                    let sql = `INSERT INTO setup (type, guildID, channelID) VALUES ('voice', '${interaction.guild.id}', '${channelTarget.id}-${channelTarget.parentId}')`
+                    let sql = `INSERT INTO setup (type, guildID, channelID, parentID) VALUES ('voice', '${interaction.guild.id}', '${channelTarget.id}', '${channelTarget.parentId}')`
                     db.query(sql, function(err) {
                         if(err) throw err;
                     })
@@ -103,7 +103,7 @@ module.exports = {
                             value: `J'ai bien **supprimé** le salon de ma base de données ! Les membres ne pourront plus créer **des canaux vocaux temporaires** en cliquant dessus !`
                         }
                     )
-                    let sql = `DELETE FROM setup WHERE type = 'voice' AND guildID = ${interaction.guild.id} AND channelID = '${channelTarget.id}-${channelTarget.parentId}'`
+                    let sql = `DELETE FROM setup WHERE type = 'voice' AND guildID = ${interaction.guild.id} AND channelID = '${channelTarget.id}'`
                     db.query(sql, function (err) {
                         if (err) throw err;
                     })

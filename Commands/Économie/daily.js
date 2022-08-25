@@ -89,7 +89,7 @@ module.exports = {
                                 .addFields(
                                     {
                                         name: `Bonjour, bonjour ! Bienvenue à la Banque Persian **${interaction.user.username}**!`,
-                                        value: `Tenez, voici vos intérêts du jour : **${claim} <:piece:997504745730211941>** !\n\nVous possédez actuellement **${parseInt(req[0].money) + claim} <:piece:997504745730211941>** sur votre compte.\n\nRevenez demain pour toucher vos prochains intérêts ! *Nyaaaaaa~*`
+                                        value: `Tenez, voici vos intérêts du jour : **${claim} <:piece:997504745730211941>** !\n\nVous avez actuellement **${parseInt(req[0].money) + claim} <:piece:997504745730211941>** sur vous.\n\nRevenez demain pour toucher vos prochains intérêts ! *Nyaaaaaa~*`
                                     }
                                 )
 

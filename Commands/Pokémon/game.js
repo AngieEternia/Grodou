@@ -1,4 +1,4 @@
-const { ApplicationCommandOptionType, PermissionFlagsBits, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, TextInputStyle } = require("discord.js")
+const { ApplicationCommandOptionType, PermissionFlagsBits, EmbedBuilder, AttachmentBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js")
 const fetch = require("node-fetch")
 const cheerio = require("cheerio")
 

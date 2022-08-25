@@ -23,7 +23,7 @@ module.exports = {
                     iconURL: "https://cdn.discordapp.com/emojis/979738900534820944.png",
                 })
                 //.setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
-                .setDescription(`◽️ **Banni :** ${ban.user} (id : \`${ban.user.id})\`\n◽️ **Auteur du bannissement :** ${executor})\n◽️ **Motif du bannissement :** \`\`\`${reason ? reason : "Aucun raison donnée"}\`\`\``)
+                .setDescription(`◽️ **Banni :** ${ban.user.username} (id : \`${ban.user.id})\`\n◽️ **Auteur du bannissement :** ${executor})\n◽️ **Motif du bannissement :** \`\`\`${reason ? reason : "Aucun raison donnée"}\`\`\``)
                 .setTimestamp();
 
             db.query(`SELECT * FROM logs WHERE type = 'modo' AND guildID = ${ban.guild.id}`, async (err, req2) => {

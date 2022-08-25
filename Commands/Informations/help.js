@@ -96,7 +96,8 @@ module.exports = {
             // On trie et filtre, et on push dans le tableau
             categories.forEach((cat, i) => {
                 let numberCat = commands.filter(c => c.category === cat.name)
-                listCommand.push("> " + numberCat.map((cmd) => "◽️ **" + cmd.name + "** : " + (cmd.description ? cmd.description : contextDescription[cmd.name])).join("\n> "))
+                //listCommand.push("> " + numberCat.map((cmd) => "◽️ **" + cmd.name + "** : " + (cmd.description ? cmd.description : contextDescription[cmd.name])).join("\n> "))
+                listCommand.push("> " + numberCat.map((cmd) => "</" + cmd.name + ":" + (interaction.guild.commands.cache.find((c) => c.name == cmd.name)).id + "> : " + (cmd.description ? cmd.description : contextDescription[cmd.name])).join("\n> "))
             });
 
             // On crée un array contenant les différents embeds pour la navigation
@@ -162,12 +163,12 @@ module.exports = {
             let permissionsList = cmd.permissions.join(', ');
             permissionsList = permissionsList.replace(/AddReactions|Administrator|AttachFiles|BanMembers|ChangeNickname|Connect|CreateInstantInvite|CreatePrivateThreads|CreatePublicThreads|DeafenMembers|EmbedLinks|KickMembers|ManageChannels|ManageEmojisAndStickers|ManageEvents|ManageGuild|ManageMessages|ManageNicknames|ManageRoles|ManageThreads|ManageWebhooks|MentionEveryone|ModerateMembers|MoveMemberMuteMembers|PrioritySpeaker|ReadMessageHistory|RequestToSpeak|SendMessages|SendMessagesInThreads|SendTTSMessages|Speak|Stream|UseApplicationCommands|UseEmbeddedActivitieUseExternalEmojis|UseExternalStickers|UseVAD|ViewAuditLog|ViewChannel|ViewGuildInsights/gi, function (matched) { return dicoPermissions[matched]; });
 
-            let recapExemple = cmd.examples.map(a => `> ${prefix}${a}`).join("\n")
-
+            let recapExemple = cmd.examples.map(a => `> ${prefix}${a}`).join("\n");
+            const command = interaction.guild.commands.cache.find((c) => c.name == cmd.name);
             let Embed = new EmbedBuilder()
                 .setColor(client.color)
                 .setAuthor({ name: `Liste des capacités apprises par Grodou\n[ Help : Commande ➔ ${cmd.name} ]`, iconURL: 'https://cdn.discordapp.com/emojis/897582796434985031.png', url: 'http://discord.eternia.fr' })
-                .setTitle(`Informations sur la commande « \`${prefix}${cmd.name}\` »`)
+                .setTitle(`Informations sur la commande « </${cmd.name}:${command.id}> »`)
                 .setThumbnail(`attachment://${thumbnail.name}`)
                 .setDescription(`${cmd.description ? cmd.description : contextDescription[`${cmd.name}`]}`)
                 .addFields([
